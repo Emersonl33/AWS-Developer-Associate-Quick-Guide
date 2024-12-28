@@ -1,14 +1,15 @@
-# AWS Certified Developer - Associate Study Guide 📚🌐
+# AWS Certified Developer Associate - Study Guide 📚🌐
 
 Este repositório contém resumos e materiais de estudo para a certificação **AWS Certified Developer - Associate**. <br>
 A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é cobrado no exame.
 
 ## Sobre o Exame 🎯
 
-A certificação **AWS Certified Developer - Associate** Tem como objetivo validar seus conhecimentos sobre ferramentas de desenvolvimento dentro da AWS, é recomendado que você tenha pelo menos 1 ano de exeperiência com desenvolvimento na AWS.
+A certificação **AWS Certified Developer Associate** tem como objetivo validar seus conhecimentos sobre ferramentas de desenvolvimento dentro da AWS, para essa certificação é recomendado que você tenha pelo menos 1 ano de exeperiência com desenvolvimento na AWS. 
+Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder https://aws.amazon.com/pt/training/digital/ ou por meio de projetos profissionais e pessoais livres.
 
-- o exame tem um core básico de serviços que segue por todas as certificações de nível Associate, considere esse serviços as chaves do castelo para ter entendimento da cloud são eles:
-- 
+- o exame tem um core básico de serviços que segue por todas as certificações de nível Associate, considere esse serviços as chaves do castelo para ter entendimento da cloud, dê preferência iniciar seu caminho por eles:
+- [EC2](EC2.md) 💻
 
 - Desenvolvimento e implementação de aplicativos na AWS
 - Uso de ferramentas e SDKs da AWS
@@ -22,7 +23,7 @@ O repositório está organizado por tópicos e serviços relevantes para a certi
 ### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
 
 - [API Gateway](API-Gateway.md) 🌐
-- [Lambda](Lambda.md) 🐍
+- [Lambda](Lambda.md) ![image](https://github.com/user-attachments/assets/e25a122d-17c6-43f6-aafb-a6d1591bb163)
 - [SQS](SQS.md) 📦
 - [SNS](SNS.md) 📢
 - [Kinesis](Kinesis.md) 🔄
