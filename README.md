@@ -12,11 +12,11 @@ A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é 
   estatístico. Dentro da minha experiência com simulados oficiais, o menor número de acertos que fiz pra atingir 720 pontos foram 37 questões aka 57% de acerto, lembrando que acertar esse número de questões não é garantia de aprovacão, um número seguro seria acima de 45 questões.
 - A duracao do exame é de 130 Minutos. Você pode ter 30 minutos acrescidos se optar por fazer em inglês e for um não nativo do idioma.
 - Preco: $150 USD 
-- O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:
-    Desenvolvimento (32%)
-    Seguranća       (26%)
-    Deployment      (24%)
-    Otimizacão      (18%)
+- O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:<br>
+    Desenvolvimento (32%)<br>
+    Seguranća       (26%)<br>
+    Deployment      (24%)<br>
+    Otimizacão      (18%)<br>
   Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
     
 ## Estrutura do Repositório 📂
