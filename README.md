@@ -5,67 +5,33 @@ A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é 
 
 ## Sobre o Exame 🎯
 
-A certificação **AWS Certified Developer Associate** tem como objetivo validar seus conhecimentos sobre ferramentas de desenvolvimento dentro da AWS, para essa certificação é recomendado que você tenha pelo menos 1 ano de exeperiência com desenvolvimento na AWS. 
-Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder https://aws.amazon.com/pt/training/digital/ ou por meio de projetos profissionais e pessoais livres.
-
+- A certificação **AWS Certified Developer Associate** tem como objetivo validar seus conhecimentos sobre ferramentas de desenvolvimento dentro da AWS. Para essa certificação é recomendado que você tenha pelo menos 1 ano de exeperiência com desenvolvimento na AWS. 
+  Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder https://aws.amazon.com/pt/training/digital/ ou por meio de projetos profissionais e pessoais livres. Abuse do Free Tier para experimentar os recursos. <br>
+- O exame tem 65 questões de múltipla escolha e mútipla alternativa(com 2 selecões ou 3 selecões) as questões de múltipla escolha têm 4 alternativas e as de múltipla alternativa têm 5 ou 6 alternativas.
+- A pontuacao é contabilizada numa escala de 100-1000, sendo considerado aprovado quem tem pontuacão >= 720. Essa pontuacão não representa porcentagem de acerto, existem questões que valem mais que outras e algumas tem pontuacão zerada por serem de caráter experimental e 
+  estatístico. Dentro da minha experiência com simulados oficiais, o menor número de acertos que fiz pra atingir 720 pontos foram 37 questões aka 57% de acerto, lembrando que acertar esse número de questões não é garantia de aprovacão, um número seguro seria acima de 45 questões.
+- A duracao do exame é de 130 Minutos. Você pode ter 30 minutos acrescidos se optar por fazer em inglês e for um não nativo do idioma.
+- Preco: $150 USD 
+- O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:
+    Desenvolvimento (32%)
+    Seguranća       (26%)
+    Deployment      (24%)
+    Otimizacão      (18%)
+  Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
+    
 ## Estrutura do Repositório 📂
 
-O repositório está organizado por tópicos e serviços relevantes para a certificação, com resumos de conteúdo, links para documentação oficial e exemplos de código. Abaixo estão os principais tópicos abordados:
+O repositório está organizado por tópicos e serviços relevantes para a certificação, todo conteúdo está contido nesse README e também pode ser acessado pelos arquivos .md
 
 ## Conteúdo do Exame 📚🌐
 
-- o exame tem um core básico de serviços que segue por todas as certificações de nível Associate, considere esse serviços as chaves do castelo para ter entendimento da cloud, dê preferência iniciar seu caminho por eles:
-### 🖥️ **Computação e Infraestrutura**
+O exame cobra por área de conhecimento e divide os tópicos por nível de importãncia, aqui vou facilitar a organização desses tópicos com os conteúdos divididos de maneira clara sobre o que é esperado:
 
-- [EC2](EC2.md) 💻
-- [ECS](ECS.md) 🐋
-- [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
-- [Lambda](Lambda.md) 🔧
-- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
-- [VPC](VPC.md) 🖧 
-
-### 🌐 **Rede e Monitoramento**
-
-- [Route 53](Route53.md) 🌍
-- [CloudWatch](CloudWatch.md) ⏰
-- [CloudTrail](CloudTrail.md) 📑
-- [CloudFront](CloudFront.md) ⚡
-- [Global Acelerator](GlobalAcelerator.md) 📡
-
-### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
+### 🖥️ **Desenvolvimento (32%)**
 
 - [API Gateway](API-Gateway.md) 🌐
 - [Lambda](Lambda.md) λ
-- [SQS](SQS.md) 📦
-- [SNS](SNS.md) 📢
-- [Kinesis](Kinesis.md) 🔄
-
-### 💾 **Armazenamento e Banco de Dados**
-
-- [DynamoDB](DynamoDB.md) 📊
-- [Aurora](Aurora.md) 🌌
-- [RDS](RDS.md) 🗄️
-- [S3](S3.md) 🗂️
-
-### 🖥️ **Computação e Infraestrutura**
-
-- [EC2](EC2.md) 💻
-- [ECS](ECS.md) ⚙️
 - [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
-- [Lambda](Lambda.md) 🔧
-- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
-- [VPC](VPC.md) 🌍
-
-### 🌐 **Rede e Monitoramento**
-
-- [Route 53](Route53.md) 🌍
-- [CloudWatch](CloudWatch.md) ⏰
-- [X-Ray](X-Ray.md) 🔍
-- [CloudTrail](CloudTrail.md) 📈
-- [CloudFront](CloudFront.md) ⚡
-
-### 🛠️ **DevOps e Ferramentas de Desenvolvimento**
-
 - [CodeArtifact](CodeArtifact.md) 📦
 - [CodeBuild](CodeBuild.md) ⚙️
 - [CodeDeploy](CodeDeploy.md) 🚀
@@ -73,12 +39,57 @@ O repositório está organizado por tópicos e serviços relevantes para a certi
 - [CodePipeline](CodePipeline.md) 🔄
 - [CodeStar](CodeStar.md) ⭐
 - [CloudFormation](CloudFormation.md) 🏗️
-- [SAM (Serverless Application Model)](SAM.md) 🖥️
+- [SAM (Serverless Application Model)](SAM.md) 🐿️
+- [SDK (Software Development Kit)](SDK.md) 🔧
+- [CDK (Cloud Development Kit)](SDK.md) ☁️
+- [X-Ray](X-Ray.md) 🔍
+
+- [EC2](EC2.md) 💻
+- [Lambda](Lambda.md) 🔧
+- [ECS](ECS.md) 🐋
+- [EKS](EKS.md) 🛞
+
+### 💾 **Armazenamento**
+
+- [S3](S3.md) 🗂️
+- [EBS](EBS.md) 🗂️
+- [EFS](EFS.md) 🗂️
 
 ### 🔒 **Segurança e Identidade**
 
 - [IAM (Identity and Access Management)](IAM.md) 🔑
 - [Cognito](Cognito.md) 👤
+
+### 🏗️ **Infra Estrutura**
+
+- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
+ 
+### 🌐 **Rede**
+
+- [Route 53](Route53.md) 🌍
+- [VPC](VPC.md) 🖧
+- [CloudFront](CloudFront.md) ⚡
+- [Global Acelerator](GlobalAcelerator.md) 📡
+
+### 🔍 **Monitoramento**
+
+- [CloudWatch](CloudWatch.md) ⏰
+- [CloudTrail](CloudTrail.md) 📑
+  
+### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
+
+- [SQS](SQS.md) 📦
+- [SNS](SNS.md) 📢
+- [Kinesis](Kinesis.md) 🔄
+
+### 🎲 **Banco de Dados**
+
+- [DynamoDB](DynamoDB.md) 📊
+- [Aurora](Aurora.md) 🌌
+- [RDS](RDS.md) 🗄️
+
+### 🛠️ **Ferramentas de Desenvolvimento**
+
 
 ### ⚡ **Eventos e Integração**
 
