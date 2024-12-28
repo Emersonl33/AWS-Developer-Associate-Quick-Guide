@@ -11,9 +11,9 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 - A pontuacao é contabilizada numa escala de 100-1000, sendo considerado aprovado quem tem pontuacão >= 720. Essa pontuacão não representa porcentagem de acerto, existem questões que valem mais que outras e algumas tem pontuacão zerada por serem de caráter experimental e 
   estatístico. Dentro da minha experiência com simulados oficiais, o menor número de acertos que fiz pra atingir 720 pontos foram 37 questões aka 57% de acerto, lembrando que acertar esse número de questões não é garantia de aprovacão, um número seguro seria acima de 45 questões.
 - A duracao do exame é de 130 Minutos. Você pode ter 30 minutos acrescidos se optar por fazer em inglês e for um não nativo do idioma.
-- Preco: $150 USD 
+- Preco: $150 USD. Com frequência a AWS distribui vouchers de 33-50% de desconto pra certificacoes associate. Além de 50% de desconto pra quem conseguiu certificar a Cloud Practitioner. 
 - O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:
-
+- 
 | **Domínio**                     | **Porcentagem** | **Serviços Principais**                                                                                   |
 |----------------------------------|-----------------|----------------------------------------------------------------------------------------------------------|
 | Desenvolvimento                 | 32%             | AWS Lambda, Amazon API Gateway, Amazon DynamoDB, Amazon S3, AWS Step Functions, Amazon Kinesis, AWS AppSync,|
