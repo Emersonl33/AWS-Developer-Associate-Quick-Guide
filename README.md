@@ -15,7 +15,7 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 - O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:<br>
 | Área               | Percentual (%) |
 |--------------------|----------------|
-| Desenvolvimento     | 32%            |
+| Desenvolvimento    | 32%            |
 | Segurança          | 26%            |
 | Deployment         | 24%            |
 | Otimização         | 18%            |
