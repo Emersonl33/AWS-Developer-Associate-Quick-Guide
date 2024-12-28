@@ -13,10 +13,13 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 - A duracao do exame é de 130 Minutos. Você pode ter 30 minutos acrescidos se optar por fazer em inglês e for um não nativo do idioma.
 - Preco: $150 USD 
 - O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:<br>
-    Desenvolvimento (32%)<br>
-    Segurança       (26%)<br>
-    Deployment      (24%)<br>
-    Otimização      (18%)<br>
+| Área               | Percentual (%) |
+|--------------------|----------------|
+| Desenvolvimento     | 32%            |
+| Segurança          | 26%            |
+| Deployment         | 24%            |
+| Otimização         | 18%            |
+
 Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
     
 ## Estrutura do Repositório 📂
