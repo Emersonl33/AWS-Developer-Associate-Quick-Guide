@@ -1,11 +1,12 @@
 # AWS Certified Developer - Associate Study Guide 📚🌐
 
-Este repositório contém resumos e materiais de estudo para a certificação **AWS Certified Developer - Associate**.
+Este repositório contém resumos e materiais de estudo para a certificação **AWS Certified Developer - Associate**. <br>
 A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é cobrado no exame.
 
 ## Sobre o Exame 🎯
 
 A certificação **AWS Certified Developer - Associate** Tem como objetivo validar seus conhecimentos sobre ferramentas de desenvolvimento dentro da AWS, é recomendado que você tenha pelo menos 1 ano de exeperiência com desenvolvimento na AWS.
+
 - o exame tem um core básico de serviços que segue por todas as certificações de nível Associate, considere esse serviços as chaves do castelo para ter entendimento da cloud são eles:
 - 
 
