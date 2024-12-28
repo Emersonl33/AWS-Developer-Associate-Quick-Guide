@@ -1,4 +1,4 @@
-# AWS Certified Developer Associate - Study Guide 📚🌐
+# AWS Certified Developer Associate - Study Guide 📚☁️
 
 Este repositório contém resumos e materiais de estudo para a certificação **AWS Certified Developer - Associate**. <br>
 A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é cobrado no exame.
@@ -8,17 +8,29 @@ A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é 
 A certificação **AWS Certified Developer Associate** tem como objetivo validar seus conhecimentos sobre ferramentas de desenvolvimento dentro da AWS, para essa certificação é recomendado que você tenha pelo menos 1 ano de exeperiência com desenvolvimento na AWS. 
 Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder https://aws.amazon.com/pt/training/digital/ ou por meio de projetos profissionais e pessoais livres.
 
-- o exame tem um core básico de serviços que segue por todas as certificações de nível Associate, considere esse serviços as chaves do castelo para ter entendimento da cloud, dê preferência iniciar seu caminho por eles:
-- [EC2](EC2.md) 💻
-
-- Desenvolvimento e implementação de aplicativos na AWS
-- Uso de ferramentas e SDKs da AWS
-- Integração com serviços como Lambda, DynamoDB, S3 e outros
-- Monitoramento e depuração de aplicativos na AWS
-
 ## Estrutura do Repositório 📂
 
 O repositório está organizado por tópicos e serviços relevantes para a certificação, com resumos de conteúdo, links para documentação oficial e exemplos de código. Abaixo estão os principais tópicos abordados:
+
+## Conteúdo do Exame 📚🌐
+
+- o exame tem um core básico de serviços que segue por todas as certificações de nível Associate, considere esse serviços as chaves do castelo para ter entendimento da cloud, dê preferência iniciar seu caminho por eles:
+### 🖥️ **Computação e Infraestrutura**
+
+- [EC2](EC2.md) 💻
+- [ECS](ECS.md) 🐋
+- [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
+- [Lambda](Lambda.md) 🔧
+- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
+- [VPC](VPC.md) 🖧 
+
+### 🌐 **Rede e Monitoramento**
+
+- [Route 53](Route53.md) 🌍
+- [CloudWatch](CloudWatch.md) ⏰
+- [CloudTrail](CloudTrail.md) 📑
+- [CloudFront](CloudFront.md) ⚡
+- [Global Acelerator](GlobalAcelerator.md) 📡
 
 ### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
 
@@ -31,7 +43,7 @@ O repositório está organizado por tópicos e serviços relevantes para a certi
 ### 💾 **Armazenamento e Banco de Dados**
 
 - [DynamoDB](DynamoDB.md) 📊
-- [Aurora](Aurora.md) 🌊
+- [Aurora](Aurora.md) 🌌
 - [RDS](RDS.md) 🗄️
 - [S3](S3.md) 🗂️
 
