@@ -23,7 +23,7 @@ O repositório está organizado por tópicos e serviços relevantes para a certi
 ### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
 
 - [API Gateway](API-Gateway.md) 🌐
-- [Lambda](Lambda.md) ![image](https://github.com/user-attachments/assets/e25a122d-17c6-43f6-aafb-a6d1591bb163)
+- [Lambda](Lambda.md) λ
 - [SQS](SQS.md) 📦
 - [SNS](SNS.md) 📢
 - [Kinesis](Kinesis.md) 🔄
