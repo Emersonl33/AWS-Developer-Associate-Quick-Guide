@@ -60,7 +60,7 @@ O IAM (Identity Access Management) é o gerenciador de permissões e acessos da 
 Com ele é possível criar usuários, grupos, definir políticas de permissões e criar roles.
 <br>
 <br>
-##### Usuários, Grupos, Políticas, Roles
+#### Usuários, Grupos, Políticas, Roles
 - Cada conta AWS é, na verdade, um usuário ###root.
 - Um usuário do IAM, é um user criado por uma conta root que vem por default sem nenhum acesso permitido, portanto, sem poder acessar nenhum recurso ou serviço da AWS.
 - Um grupo IAM pode conter vários usuários IAM. **Um grupo do IAM NÃO pode conter outro grupo IAM**.
@@ -68,7 +68,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - Roles são permissões temporárias sem a necessidade de compartilhamento de credenciais atribuídas a um serviço (ou usuário) para acessar recursos em outro serviço. Além disso, uma conta pode assumir uma role em outra conta para obter as permissões necessárias para acessar os recursos dessa conta.
 
 
-## Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
+#### Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
 - Políticas gerenciadas são criadas e mantidas pela AWS (ou pelo usuário) para ser aplicada a múltiplos usuários, grupos ou roles, como a política AmazonS3ReadOnlyAccess que concede permissões de leitura em todos os buckets S3.
 
 ```JSON
@@ -128,7 +128,7 @@ Exemplo da estrutura de uma *Trust policy* no formato JSON
 ```
 <br />
 
-## Boas Práticas
+#### Boas Práticas
 - Somente use a conta root para fazer as configurações base na AWS.
 - Um usuário físico = Um usuário IAM
 - Pratique o princípio de menor privilégio(least privilege principle) dando aos usuários apenas as permissões que eles precisam.
