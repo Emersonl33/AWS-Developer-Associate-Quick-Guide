@@ -48,7 +48,6 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
   Segurança e Identidade🔒 
 </h1>
 <p align= "center">
-  <br />
   <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
 <br />
     <h2 align="center">
@@ -56,7 +55,16 @@ IAM
     </h2>
 </p>
 <br />
-  
+
+O IAM (Identity Access Management) é o gerenciador de permissões e acessos da AWS. O IAM é um serviço gratuito e global.
+- Com ele é possível criar usuários, grupos, definir políticas de permissões e criar roles.
+
+## Usuários, Grupos e Políticas
+- Cada conta AWS é, na verdade, um usuário ###root.
+- Um usuário do IAM, é um user criado por uma conta root que vem por default sem nenhum acesso permitido, portanto, sem poder acessar nenhum recurso ou serviço da AWS.
+- Um grupo IAM pode conter vários usuários IAM. **Um grupo do IAM NÃO pode conter outro grupo IAM**.
+- Uma policy(política, traduzido) é um conjunto de permissões. Cada grupo IAM ou usuário IAM podem possuir de 0 a N policies. Quando você adiciona um usuário IAM a um grupo, você automaticamente associa todas as policies e as permissões anexadas ao grupo a este usuário.
+
 - [Cognito](Cognito.md) 👤
 
 
