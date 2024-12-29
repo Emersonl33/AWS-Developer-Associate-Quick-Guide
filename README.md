@@ -400,6 +400,7 @@ A versão $LATEST não deve ser utilizada em ambientes de produção.
 ## Aliases
 - Um alias é uma referência estável a uma **versão** de uma função Lambda. Enquanto a versão é imutável, o alias permite que você apontar para diferentes versões de uma função.
 - Um alias tem um nome estável, como prod, dev, test, etc., e pode apontar para qualquer versão específica de uma função Lambda.
+- Um alias não pode apontar para outro alias. (***Atenção pra esse ponto!***)
 - Você pode alterar o alias para apontar para diferentes versões, sem alterar o código da função.
 - Atribuição de Percentual de Tráfego(***Atenção pra esse ponto!***): Você pode configurar aliases para distribuir o tráfego entre diferentes versões de forma gradual (usado, por exemplo, para deploys canary).
 
@@ -423,14 +424,27 @@ A versão $LATEST não deve ser utilizada em ambientes de produção.
 
 <h1 align= "center"> 
  ☁️Developer Tools🔧 
-</h1>
-<p align= "center">
-  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:180px; width:180px;"/>
+<h1 />
+  <p align= "center">
+  <img src="./Icons/Arch_AWS-Amplify_64%405x.png" alt="Amplify-icon" style="height:180px; width:180px;"/>
 <br />
     <h2 align="center">
-EC2
+Amplify 
     </h2>
 </p>
+
+O AWS Amplify facilita a criação do backend para você. Ele pode gerar automaticamente recursos como APIs, banco de dados, autenticação de usuários e armazenamento de arquivos, tudo de forma simplificada e sem precisar gerenciar servidores. Você só precisa configurar o que precisa e o Amplify cuida da parte de infraestrutura.
+
+## Integração CI/CD
+- O CI/CD do AWS Amplify não precisa de outros serviços da AWS como o CodeDeploy ou CodeBuild para funcionar. O Amplify já inclui ferramentas integradas de build e deploy, ou seja, tudo o que você precisa para configurar o fluxo de CI/CD está dentro da própria plataforma Amplify.
+- O primeiro passo para configurar o CI/CD no Amplify é conectar o seu repositório de código ao serviço. Amplify suporta repositórios do GitHub, GitLab, Bitbucket e AWS CodeCommit.
+- Build Automático: Sempre que você faz uma alteração no código (como um novo commit ou push para o branch monitorado), o Amplify executa automaticamente o processo de build.
+- Deploy Automático: Após o build ser concluído com sucesso, o Amplify automaticamente implanta os arquivos gerados na hospedagem serverless do Amplify
+
+## :books: Referências
+ - *https://docs.amplify.aws/*
+<br />
+<br />
 ## Como Usar Este Repositório 🧑‍💻
 
 1. **Navegação pelos Tópicos**: Cada diretório contém materiais específicos sobre um determinado serviço ou conceito. Abra os arquivos `.md` para ler os resumos, entender os conceitos principais e acessar links para mais detalhes, como a documentação oficial da AWS.
