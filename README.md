@@ -74,11 +74,25 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - Política Baseada em Recursos: É aplicada diretamente a um recurso da AWS (como um bucket S3 ou uma fila SQS) para controlar quem pode acessar esse recurso, como uma política de bucket S3 que permite que um usuário de outra conta acesse seus objetos.
 
 ### Exemplo de uma *policy*
-
 Exemplo da estrutura de uma *policy* no formato JSON
 
 ```JSON
-
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::*",
+        "arn:aws:s3:::*/*"
+      ]
+    }
+  ]
+}
 ```
 
 <br />
