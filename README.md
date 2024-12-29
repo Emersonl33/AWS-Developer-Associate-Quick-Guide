@@ -128,6 +128,19 @@ Exemplo da estrutura de uma *Trust policy* no formato JSON
 ```
 <br />
 
+## Boas Práticas
+- Somente use a conta root para fazer as configurações base na AWS.
+- Um usuário físico = Um usuário IAM
+- Pratique o princípio de menor privilégio(least privilege principle) dando aos usuários apenas as permissões que eles precisam.
+- Adicione Usuários a grupos e Adicione permissões a grupos.
+- Crie políticas de senhas fortes.
+- Use e Endosse o uso de MFA
+- Crie e use Roles para dar permissões para serviços AWS
+- Use chaves de acesso(Veja chaves privada/chaves públicas) para acessar CLIs e SDKs
+- Faça auditoria nas permissões da conta AWS com o relatório de credenciais IAM.
+
+
+
 - [Cognito](Cognito.md) 👤
 
 
