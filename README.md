@@ -32,7 +32,7 @@ O repositório está organizado por tópicos e serviços relevantes para a certi
 
 O exame cobra por área de conhecimento e divide os tópicos por nível de importãncia, aqui vou facilitar a organização desses tópicos com os conteúdos divididos de maneira clara sobre o que é esperado:
 
-### 🖥️ *Desenvolvimento (32%)*
+### 🖥️ ****Desenvolvimento (32%)****
 
 - [API Gateway](API-Gateway.md) 🌐
 - [Lambda](Lambda.md) λ
