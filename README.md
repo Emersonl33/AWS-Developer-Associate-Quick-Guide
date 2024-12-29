@@ -46,8 +46,8 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 
 <h1 align= "center"> 
   🔒 **Segurança e Identidade**
+  <br>
 </h1>
-<br>
 <p align= "center">
   <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
 <br />
