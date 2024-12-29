@@ -14,7 +14,7 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 - Preco: $150 USD. Com frequência a AWS distribui vouchers de 33-50% de desconto pra certificacoes de nível associate. Além de 50% de desconto pra quem conseguiu certificar a Cloud Practitioner. 
 - O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:
   
-| **Domínio**                     | **Porcentagem** | **Serviços Principais**                                                                                   |
+| **Domínio**                     | **Peso** | **Principais Serviços**                                                                                   |
 |----------------------------------|-----------------|----------------------------------------------------------------------------------------------------------|
 | Desenvolvimento                 | 32%             | AWS EC2, AWS Lambda, API Gateway, AWS SDK, AWS CLI, AWS CDK, AWS SAM, DynamoDB, AWS RDS, AWS Aurora, ElastiCache, AWS Athena, AWS S3, AWS EFS, AWS EBS, Step Functions, AWS SNS, AWS SQS, Amazon Kinesis, AWS AppSync, CloudFront, Route 53|
 | Segurança                       | 26%             | AWS IAM, AWS STS, AWS Cognito, Certificate Manager (ACM), AWS KMS, AWS Secrets Manager, AWS WAF, AWS VPC|
@@ -32,7 +32,7 @@ O repositório está organizado por tópicos e serviços relevantes para a certi
 
 O exame cobra por área de conhecimento e divide os tópicos por nível de importãncia, aqui vou facilitar a organização desses tópicos com os conteúdos divididos de maneira clara sobre o que é esperado:
 
-### 🖥️ **Desenvolvimento (32%)**
+### 🖥️ *Desenvolvimento (32%)*
 
 - [API Gateway](API-Gateway.md) 🌐
 - [Lambda](Lambda.md) λ
