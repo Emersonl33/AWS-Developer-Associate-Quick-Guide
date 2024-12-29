@@ -148,9 +148,3 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para abrir uma *
 
 **Boa sorte nos seus estudos e no exame de certificação!** 🎓🚀
 
-
-
----
-
-**Boa sorte nos seus estudos e no exame de certificação!**
-
