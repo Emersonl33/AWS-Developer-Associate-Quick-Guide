@@ -1,6 +1,6 @@
 # AWS Certified Developer Associate - Study Guide 📚☁️
 
-Este repositório contém resumos e materiais de estudo para a certificação **AWS Certified Developer - Associate**. <br>
+Esse repositório é um rodmap com os pontos mais importantes de todo conteúdo que consumi durante minha preparação para a certificação **AWS Certified Developer - Associate**. <br>
 A idéia é trazer um guia de estudos com conceitos fundamentais sobre o que é cobrado no exame.
 - **O repositório está organizado por tópicos e serviços relevantes para a certificação, todo conteúdo está contido nesse README e também pode ser acessado pelos arquivos .md**
 
@@ -25,9 +25,7 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 <br>
 Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
 
-## Conteúdo do Exame 📚🌐
-
-O exame cobra por área de conhecimento e divide os tópicos por nível de importãncia, aqui vou facilitar a organização desses tópicos com os conteúdos divididos de maneira clara sobre o que é esperado:
+# Conteúdo do Exame 📚🌐
 
 ### 🖥️ ****Desenvolvimento (32%)****
 
