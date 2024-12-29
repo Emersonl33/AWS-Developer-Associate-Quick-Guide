@@ -137,7 +137,6 @@ Este repositório é colaborativo! Se você tem sugestões, correções ou novos
 Este repositório é licenciado sob a [MIT License](https://opensource.org/licenses/MIT). Sinta-se livre para usar e contribuir com o conteúdo.
 
 ## Referências 🌐
-
 - [Documentação Oficial da AWS](https://aws.amazon.com/documentation/)
 - [AWS Certified Developer - Associate Exam Guide](https://aws.amazon.com/certification/certified-developer-associate/)
 
