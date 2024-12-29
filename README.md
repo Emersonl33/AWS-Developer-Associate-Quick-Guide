@@ -13,11 +13,11 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 - A duracao do exame é de 130 Minutos. Você pode ter 30 minutos acrescidos se optar por fazer em inglês e for um não nativo do idioma.
 - Preco: $150 USD. Com frequência a AWS distribui vouchers de 33-50% de desconto pra certificacoes associate. Além de 50% de desconto pra quem conseguiu certificar a Cloud Practitioner. 
 - O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:
-- 
+  
 | **Domínio**                     | **Porcentagem** | **Serviços Principais**                                                                                   |
 |----------------------------------|-----------------|----------------------------------------------------------------------------------------------------------|
-| Desenvolvimento                 | 32%             | AWS Lambda, Amazon API Gateway, Amazon DynamoDB, Amazon S3, AWS Step Functions, Amazon Kinesis, AWS AppSync,|
-| Segurança                       | 26%             | AWS IAM, AWS KMS, AWS Secrets Manager, Amazon Cognito                                                    |
+| Desenvolvimento                 | 32%             | AWS Lambda, API Gateway, CDK, SAM, DynamoDB, S3, EFS, EBS, Step Functions, Amazon Kinesis, AWS AppSync, EC2, SDK, |
+| Segurança                       | 26%             | AWS IAM, AWS STS, AWS Cognito, Certificate Manager (ACM), AWS KMS, AWS Secrets Manager, AWS WAF|
 | Deployment                      | 24%             | AWS Elastic Beanstalk, AWS CodePipeline, AWS CodeBuild, AWS CloudFormation, Amazon ECS/EKS               |
 | Otimização e Solução de Problemas | 18%             | Amazon CloudWatch, AWS X-Ray, AWS Trusted Advisor                                                      |
 
