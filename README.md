@@ -151,7 +151,8 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - **GetFederationToken:** Para obter credenciais temporárias para um *federated user*
 - **GetCallerIdentity:** Para retornar detalhes sobre o usuário IAM e a sua função(*role*) usada na chamada da API
 - **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
-
+<br>
+### Isso é tudo pessoal, para melhor compreensão recomendo a documentação oficial da AWS
 ## Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
 <br>
 <br>
