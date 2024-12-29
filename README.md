@@ -420,7 +420,17 @@ A versão $LATEST não deve ser utilizada em ambientes de produção.
  - *https://docs.aws.amazon.com/lambda/*
 <br />
 <br />
-  
+
+<h1 align= "center"> 
+ ☁️Developer Tools🔧 
+</h1>
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:180px; width:180px;"/>
+<br />
+    <h2 align="center">
+EC2
+    </h2>
+</p>
 ## Como Usar Este Repositório 🧑‍💻
 
 1. **Navegação pelos Tópicos**: Cada diretório contém materiais específicos sobre um determinado serviço ou conceito. Abra os arquivos `.md` para ler os resumos, entender os conceitos principais e acessar links para mais detalhes, como a documentação oficial da AWS.
