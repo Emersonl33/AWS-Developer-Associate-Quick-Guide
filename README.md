@@ -44,6 +44,15 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - Data Ingestion and Analytics
 - Containers
 
+### 🔒 **Segurança e Identidade**
+
+<p align= "center">
+  <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
+  
+  
+- [Cognito](Cognito.md) 👤
+
+
 ### 🖥️ ****Computacão****
 
 - [EC2](EC2.md) 💻
@@ -74,11 +83,6 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [S3](S3.md) 🗂️
 - [EBS](EBS.md) 🗂️
 - [EFS](EFS.md) 🗂️
-
-### 🔒 **Segurança e Identidade**
-
-- [IAM (Identity and Access Management)](IAM.md) 🔑
-- [Cognito](Cognito.md) 👤
 
 ### 🏗️ **Infra Estrutura**
 
