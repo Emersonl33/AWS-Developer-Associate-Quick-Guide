@@ -68,12 +68,8 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - Roles são permissões temporárias sem a necessidade de compartilhamento de credenciais atribuídas a um serviço (ou usuário) para acessar recursos em outro serviço. Além disso, uma conta pode assumir uma role em outra conta para obter as permissões necessárias para acessar os recursos dessa conta.
 
 
-## Políticas de confiança, Políticas Gerenciadas pela AWS, Políticas baseadas em recurso
-- Trust policies (ou "políticas de confiança") na AWS são um tipo de política associada a uma role (função) que define quem pode assumir essa role. Elas determinam quais entidades (usuários, serviços ou contas) têm permissão para "assumir" a role e agir com as permissões atribuídas a ela.
+## Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
 - Políticas gerenciadas são criadas e mantidas pela AWS (ou pelo usuário) para ser aplicada a múltiplos usuários, grupos ou roles, como a política AmazonS3ReadOnlyAccess que concede permissões de leitura em todos os buckets S3.
-- Política Baseada em Recursos: É aplicada diretamente a um recurso da AWS (como um bucket S3 ou uma fila SQS) para controlar quem pode acessar esse recurso, como uma política de bucket S3 que permite que um usuário de outra conta acesse seus objetos.
-
-### Exemplo de uma *policy*
 Exemplo da estrutura de uma *policy* no formato JSON
 
 ```JSON
@@ -94,6 +90,42 @@ Exemplo da estrutura de uma *policy* no formato JSON
   ]
 }
 ```
+<br />
+- Trust policies (ou "políticas de confiança") na AWS são um tipo de política associada a uma role (função) que define quem pode assumir essa role. Elas determinam quais entidades (usuários, serviços ou contas) têm permissão para "assumir" a role e agir com as permissões atribuídas a ela.
+Exemplo da estrutura de uma *Trust policy* no formato JSON
+
+```JSON
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+<br />
+- Política Baseada em Recursos: É aplicada diretamente a um recurso da AWS (como um bucket S3 ou uma fila SQS) para controlar quem pode acessar esse recurso, como uma política de bucket S3 que permite que um usuário de outra conta acesse seus objetos.
+```JSON
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::123456789012:user/ExampleUser"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::example-bucket/*"
+    }
+  ]
+}
+```
+<br />
 
 <br />
 - [Cognito](Cognito.md) 👤
