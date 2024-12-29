@@ -11,15 +11,15 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
 - A pontuacao é contabilizada numa escala de 100-1000, sendo considerado aprovado quem tem pontuacão >= 720. Essa pontuacão não representa porcentagem de acerto, existem questões que valem mais que outras e algumas tem pontuacão zerada por serem de caráter experimental e 
   estatístico. Dentro da minha experiência com simulados oficiais, o menor número de acertos que fiz pra atingir 720 pontos foram 37 questões aka 57% de acerto, lembrando que acertar esse número de questões não é garantia de aprovacão, um número seguro seria acima de 45 questões.
 - A duracao do exame é de 130 Minutos. Você pode ter 30 minutos acrescidos se optar por fazer em inglês e for um não nativo do idioma.
-- Preco: $150 USD. Com frequência a AWS distribui vouchers de 33-50% de desconto pra certificacoes associate. Além de 50% de desconto pra quem conseguiu certificar a Cloud Practitioner. 
+- Preco: $150 USD. Com frequência a AWS distribui vouchers de 33-50% de desconto pra certificacoes de nível associate. Além de 50% de desconto pra quem conseguiu certificar a Cloud Practitioner. 
 - O exame é dividido por área de conhecimento e cada área de conhecimento tem um peso:
   
 | **Domínio**                     | **Porcentagem** | **Serviços Principais**                                                                                   |
 |----------------------------------|-----------------|----------------------------------------------------------------------------------------------------------|
-| Desenvolvimento                 | 32%             | AWS Lambda, API Gateway, CDK, SAM, DynamoDB, S3, EFS, EBS, Step Functions, Amazon Kinesis, AWS AppSync, EC2, SDK, |
-| Segurança                       | 26%             | AWS IAM, AWS STS, AWS Cognito, Certificate Manager (ACM), AWS KMS, AWS Secrets Manager, AWS WAF|
-| Deployment                      | 24%             | AWS Elastic Beanstalk, AWS CodePipeline, AWS CodeBuild, AWS CloudFormation, Amazon ECS/EKS               |
-| Otimização e Solução de Problemas | 18%             | Amazon CloudWatch, AWS X-Ray, AWS Trusted Advisor                                                      |
+| Desenvolvimento                 | 32%             | AWS EC2, AWS Lambda, API Gateway, AWS SDK, AWS CLI, AWS CDK, AWS SAM, DynamoDB, AWS RDS, AWS Aurora, ElastiCache, AWS Athena, AWS S3, AWS EFS, AWS EBS, Step Functions, AWS SNS, AWS SQS, Amazon Kinesis, AWS AppSync, CloudFront, Route 53|
+| Segurança                       | 26%             | AWS IAM, AWS STS, AWS Cognito, Certificate Manager (ACM), AWS KMS, AWS Secrets Manager, AWS WAF, AWS VPC|
+| Deployment                      | 24%             | AWS Elastic Beanstalk, AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, AWS CodeCommit, AWS CloudFormation, Amazon ECS/EKS/ECR/Fargate               |
+| Otimização e Solução de Problemas | 18%             | Amazon CloudWatch, AWS Cloud Trail, AWS X-Ray, AWS Trusted Advisor, AWS EventBridge, Elastic Load Balancind (ELB), Auto Scaling Group (ASG),                                          |
 
 <br>
 Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
