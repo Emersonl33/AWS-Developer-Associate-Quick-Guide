@@ -158,7 +158,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 <br>
 
 <p align= "center">
-  <img src="./icons/aws-Cognito.png" alt="IAM-icon" style="height:120px; width:120px;"/>
+  <img src="./icons/aws-Cognito.png" alt="COGNITO-icon" style="height:120px; width:120px;"/>
 <br />
     <h3 align="center">
 COGNITO
@@ -190,17 +190,17 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 
 ### Referência: https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html
 
-<h1 align= "center"> 
-  Segurança e Identidade🔒 
-</h1>
+<h4 align= "center"> 
+  🖥️ Computacão
+</h4>
 <p align= "center">
-  <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
+  <img src="./icons/aws-IAM.png" alt="EC2-icon" style="height:120px; width:120px;"/>
 <br />
     <h2 align="center">
 IAM
     </h2>
 </p>
-### 🖥️ ****Computacão****
+
 
 - [EC2](EC2.md) 💻
 - 
