@@ -203,7 +203,7 @@ EC2
     </h2>
 </p>
 
-O Amazon EC2 (Elastic Compute Cloud) é o principal serviço da AWS, com ele você pode subir instâncias de servidores virtuais na nuvem para executar aplicativos e serviços de forma escalável e flexível. Sem precisar provisionar nada.
+O Amazon EC2 (Elastic Compute Cloud) é o principal serviço da AWS, com ele você pode subir instâncias de servidores virtuais na nuvem para executar aplicativos e serviços de forma escalável e flexível.
 
 ## Tipos de instâncias
 - General Purpose: Instâncias balanceadas para uma ampla variedade de aplicações (ex: t3, m5).
@@ -244,7 +244,8 @@ O Amazon EC2 (Elastic Compute Cloud) é o principal serviço da AWS, com ele voc
 - AWS VPN: Acesso seguro à VPC por meio de um tunelamento privado.
 - Elastic IP Para garantir que você tenha um IP público fixo, o Elastic IP pode ser associado à sua instância, permitindo o acesso consistente via SSH ou RDP, mesmo após reinicializações. Após associar o Elastic IP à instância, use SSH ou RDP como faria com um IP público normal.
 
-## Tipos de instância
+## Tipos de contratação
+
 | **Opção de Compra**       | **Descrição**                                                                                                                                 | **Quando Usar**                                                                                                                                                        | **Vantagens**                                                                                                                                                                                                                                                                                  |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Instâncias sob Demanda** | Paga-se pela capacidade de computação com base no uso, sem necessidade de compromissos.                                                          | Ideal para cargas de trabalho imprevisíveis ou de curto prazo, onde a demanda de recursos não pode ser prevista.                                                     | - Pagamento por hora ou por segundo.<br>- Flexibilidade para iniciar ou parar instâncias a qualquer momento.<br>- Sem compromisso de longo prazo.                                                                                                                                                        |
@@ -269,7 +270,7 @@ Uma AMI (Amazon Machine Image) é basicamente uma "imagem" ou "modelo" que cont�
 ## ASG (Auto Scaling Group)
 O Auto Scaling group é um utilizado para aumentar ou diminuir o número de instâncias em execução com base em métricas de desempenho.
 
-### Aqui estão as principais features do ASG:
+### Principais features do ASG:
 - O ASG é regional, ou seja, ele só roda dentro de uma Region, onde vc pode distribuir suas máquinas, ao longo das zonas de disponibilidade.
 - Ajuste de capacidade com base em políticas: Permite configurar políticas para aumentar ou diminuir o número de instâncias com base em métricas de desempenho ou horários específicos.
 - Se não houver nenhuma política de terminação de instâncias configurada, o comportamento padrão é que o ASG termine a instância mais antiga
@@ -282,6 +283,16 @@ O Auto Scaling group é um utilizado para aumentar ou diminuir o número de inst
 - Capacidade de escalonamento vertical: Permite aumentar ou diminuir a capacidade de instâncias EC2 no grupo (como a alteração do tipo de instância).
 - Suporte a instâncias spot: Pode incluir instâncias spot no grupo de Auto Scaling, aproveitando os preços mais baixos das instâncias não reservadas.
 
+<h1 align= "center"> 
+  🖥️ Computação
+</h1>
+<p align= "center">
+  <img src="./icons/aws-EC2.png" alt="EC2-icon" style="height:120px; width:120px;"/>
+<br />
+    <h2 align="center">
+EC2
+    </h2>
+</p>
 - [EC2](EC2.md) 💻
 - 
 - [Lambda](Lambda.md) 🔧
