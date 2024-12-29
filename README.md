@@ -152,7 +152,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - **GetCallerIdentity:** Para retornar detalhes sobre o usuário IAM e a sua função(*role*) usada na chamada da API
 - **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
 
-## Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
+## Referência: *https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html*
 
 <br>
 <br>
@@ -196,13 +196,23 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
   🖥️ Computação
 </h1>
 <p align= "center">
-  <img src="./icons/aws-IAM.png" alt="EC2-icon" style="height:120px; width:120px;"/>
+  <img src="./icons/aws-EC2.png" alt="EC2-icon" style="height:120px; width:120px;"/>
 <br />
     <h2 align="center">
-IAM
+EC2
     </h2>
 </p>
 
+O Amazon EC2 (Elastic Compute Cloud) é um serviço da AWS que permite criar e gerenciar instâncias de servidores virtuais na nuvem para executar aplicativos e serviços de forma escalável e flexível.
+
+## Tipos de instância
+| **Opção de Compra**       | **Descrição**                                                                                                                                 | **Quando Usar**                                                                                                                                                        | **Vantagens**                                                                                                                                                                                                                                                                                  |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Instâncias sob Demanda** | Paga-se pela capacidade de computação com base no uso, sem necessidade de compromissos.                                                          | Ideal para cargas de trabalho imprevisíveis ou de curto prazo, onde a demanda de recursos não pode ser prevista.                                                     | - Pagamento por hora ou por segundo.<br>- Flexibilidade para iniciar ou parar instâncias a qualquer momento.<br>- Sem compromisso de longo prazo.                                                                                                                                                        |
+| **Instâncias Reservadas**  | Capacidades reservadas por 1 ou 3 anos, com descontos significativos em comparação às instâncias sob demanda.                                   | Ideal para cargas de trabalho com demanda previsível e constante ao longo do tempo.                                                                                   | - Desconto de até 75% em relação às instâncias sob demanda.<br>- Opções de pagamento: pagamento total, parcial ou nada no momento da compra.<br>- Garantia de capacidade na região escolhida.                                                                                                                |
+| **Instâncias Spot**        | Utiliza a capacidade ociosa do EC2 com grandes descontos. O preço varia conforme a oferta e demanda.                                            | Ideal para cargas de trabalho flexíveis e tolerantes a falhas, como processamento em lote ou renderização de gráficos.                                                | - Descontos de até 90% em relação às instâncias sob demanda.<br>- Pagamento conforme a tarifa do mercado.<br>- Flexibilidade de ser interrompido, se necessário.                                                                                                                                      |
+| **EC2 Savings Plans**      | Compromisso de uso por 1 ou 3 anos em troca de descontos. Oferece flexibilidade para mudar instâncias, regiões e sistemas operacionais.          | Ideal para quem busca descontos com flexibilidade para diferentes tipos de instâncias e regiões.                                                                    | - Desconto de até 72% em relação às instâncias sob demanda.<br>- Flexibilidade para mudar tipos de instâncias, regiões e sistemas operacionais.<br>- Compromisso de uso por 1 ou 3 anos com diferentes opções de pagamento.                                                                              |
+| **Instâncias Dedicadas**   | Instâncias EC2 em hardware dedicado, sem compartilhamento com outras contas AWS.                                                              | Ideal para cargas de trabalho que exigem conformidade com regulamentos específicos ou isolamento físico por questões de segurança.                                     | - Garantia de que a infraestrutura não é compartilhada com outras contas AWS.<br>- Pagamento por hora.<br>- Combinação possível com instâncias sob demanda ou reservadas.                                                                                                                         |
 
 - [EC2](EC2.md) 💻
 - 
