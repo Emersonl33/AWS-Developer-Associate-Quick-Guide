@@ -44,14 +44,15 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - Data Ingestion and Analytics
 - Containers
 
-### 🔒 **Segurança e Identidade**
-
+<h1 align= "center"> 
+  🔒 **Segurança e Identidade**
+</h1>
 <p align= "center">
   <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
 <br />
-    <h1 align="center">
+    <h2 align="center">
 IAM
-    </h1>
+    </h2>
 </p>
 <br />
   
