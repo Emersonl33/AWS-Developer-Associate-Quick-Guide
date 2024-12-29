@@ -68,7 +68,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - Roles são permissões temporárias sem a necessidade de compartilhamento de credenciais atribuídas a um serviço (ou usuário) para acessar recursos em outro serviço. Além disso, uma conta pode assumir uma role em outra conta para obter as permissões necessárias para acessar os recursos dessa conta.
 
 
-#### Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
+### Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
 - Políticas gerenciadas são criadas e mantidas pela AWS (ou pelo usuário) para ser aplicada a múltiplos usuários, grupos ou roles, como a política AmazonS3ReadOnlyAccess que concede permissões de leitura em todos os buckets S3.
 
 ```JSON
@@ -128,7 +128,7 @@ Exemplo da estrutura de uma *Trust policy* no formato JSON
 ```
 <br />
 
-#### Boas Práticas
+### Boas Práticas
 - Somente use a conta root para fazer as configurações base na AWS.
 - Um usuário físico = Um usuário IAM
 - Pratique o princípio de menor privilégio(least privilege principle) dando aos usuários apenas as permissões que eles precisam.
@@ -139,6 +139,19 @@ Exemplo da estrutura de uma *Trust policy* no formato JSON
 - Use chaves de acesso(Veja chaves privada/chaves públicas) para acessar CLIs e SDKs
 - Faça auditoria nas permissões da conta AWS com o relatório de credenciais IAM.
 
+### STS
+
+**AWS STS** é uma sigla para *Security Token Service* ele permite que se obtenha credenciais temporárias para acessar recursos da AWS diretamente e decodificar mensagens de erro.
+
+- **AssumeRole:** Permite que uma identidade (usuário, serviço, ou conta) assuma uma role e obtenha permissões temporárias.
+- **AssumeRoleWIthSAML:**  Retorna credenciais para usuários logados com SAML
+- **AssumeRoleWithWebIdentity:** Retorna funções(*roles*) para usuários logados com um IdP (Facebook, Google, e etc) entretanto não utilize mais essa API e sim Cognito Identity Pools
+- **GetSessionToken:** Para usuários com MFA ou uma conta *root* da AWS
+- **GetFederationToken:** Para obter credenciais temporárias para um *federated user*
+- **GetCallerIdentity:** Para retornar detalhes sobre o usuário IAM e a sua função(*role*) usada na chamada da API
+- **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
+
+Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
 
 
 - [Cognito](Cognito.md) 👤
