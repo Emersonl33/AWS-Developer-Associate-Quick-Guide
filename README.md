@@ -17,15 +17,23 @@ Isso pode ser adquirido por meio de labs práticos disponíveis no skillbuilder 
   
 | **Domínio**                     | **Peso** | **Principais Serviços**                                                                                   |
 |----------------------------------|-----------------|----------------------------------------------------------------------------------------------------------|
-| Desenvolvimento                 | 32%             | AWS EC2, AWS Lambda, API Gateway, AWS SDK, AWS CLI, AWS CDK, AWS SAM, DynamoDB, AWS RDS, AWS Aurora, ElastiCache, AWS Athena, AWS S3, AWS EFS, AWS EBS, Step Functions, AWS SNS, AWS SQS, Amazon Kinesis, AWS AppSync, CloudFront, Route 53|
+| Desenvolvimento                 | 32%             | AWS EC2, AWS Lambda, API Gateway, AWS SDK, AWS CLI, AWS CDK, AWS SAM, DynamoDB, AWS RDS, AWS Aurora, ElastiCache, AWS S3, AWS EFS, AWS EBS, CloudFront, Route 53, Step Functions, AWS SNS, AWS SQS, Amazon Kinesis, AWS AppSync, AWS Athena, AWS OpenSearch Service,|
 | Segurança                       | 26%             | AWS IAM, AWS STS, AWS Cognito, Certificate Manager (ACM), AWS KMS, AWS Secrets Manager, AWS WAF, AWS VPC|
-| Deployment                      | 24%             | AWS Elastic Beanstalk, AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, AWS CodeCommit, AWS CloudFormation, Amazon ECS/EKS/ECR/Fargate               |
+| Deployment                      | 24%             | AWS Elastic Beanstalk, AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, AWS CodeCommit, AWS CloudFormation, AWS CodeGuru, Amazon ECS/EKS/ECR/Fargate, AWS Amplify               |
 | Otimização e Solução de Problemas | 18%             | Amazon CloudWatch, AWS Cloud Trail, AWS X-Ray, AWS Trusted Advisor, AWS EventBridge, Elastic Load Balancind (ELB), Auto Scaling Group (ASG),                                          |
 
 <br>
 Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
 
 # Conteúdo do Exame 📚🌐
+Nessa secão vou organizar o conteúdo do exame de acordo com o tipo do servico em ordem de importância.
+
+### 🖥️ ****Computacão****
+- [EC2](EC2.md) 💻
+- 
+- [Lambda](Lambda.md) 🔧
+- [ECS](ECS.md) 🐋
+- [EKS](EKS.md) 🛞
 
 ### 🖥️ ****Desenvolvimento (32%)****
 
@@ -41,13 +49,8 @@ Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev
 - [CloudFormation](CloudFormation.md) 🏗️
 - [SAM (Serverless Application Model)](SAM.md) 🐿️
 - [SDK (Software Development Kit)](SDK.md) 🔧
-- [CDK (Cloud Development Kit)](SDK.md) ☁️
+- [CDK (Cloud Development Kit)](CDK.md) ☁️
 - [X-Ray](X-Ray.md) 🔍
-
-- [EC2](EC2.md) 💻
-- [Lambda](Lambda.md) 🔧
-- [ECS](ECS.md) 🐋
-- [EKS](EKS.md) 🛞
 
 ### 💾 **Armazenamento**
 
