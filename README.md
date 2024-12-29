@@ -48,7 +48,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
   Segurança e Identidade🔒 
 </h1>
 <p align= "center">
-  <img src="./Icons/Arch_AWS-Identity-and-Access-Management_64%405x.png" alt="IAM-icon" style="height:160px; width:160px;"/>
+  <img src="./Icons/Arch_AWS-Identity-and-Access-Management_64%405x.png" alt="IAM-icon" style="height:180px; width:180px;"/>
 <br />
     <h2 align="center">
 IAM
@@ -158,11 +158,11 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 <br>
 
 <p align= "center">
-  <img src="/Icons/Arch_Amazon-Cognito_64%405x.png" alt="COGNITO-icon" style="height:160px; width:160px;"/>
+  <img src="/Icons/Arch_Amazon-Cognito_64%405x.png" alt="COGNITO-icon" style="height:180px; width:180px;"/>
 <br />
-    <h3 align="center">
+    <h1 align="center">
 COGNITO
-    </h3>
+    </h1>
 </p>
 <br />
 
@@ -196,7 +196,7 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
   🖥️ Computação
 </h1>
 <p align= "center">
-  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:160px; width:160px;"/>
+  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:180px; width:180px;"/>
 <br />
     <h2 align="center">
 EC2
@@ -283,18 +283,16 @@ O Auto Scaling group é um utilizado para aumentar ou diminuir o número de inst
 - Capacidade de escalonamento vertical: Permite aumentar ou diminuir a capacidade de instâncias EC2 no grupo (como a alteração do tipo de instância).
 - Suporte a instâncias spot: Pode incluir instâncias spot no grupo de Auto Scaling, aproveitando os preços mais baixos das instâncias não reservadas.
 
-<h1 align= "center"> 
-  🖥️ Computação
-</h1>
 <p align= "center">
-  <img src="./icons/aws-EC2.png" alt="EC2-icon" style="height:120px; width:120px;"/>
+  <img src="./Icons/Arch_AWS-Lambda_64%405x.png" alt="Lambda-icon" style="height:180px; width:180px;"/>
 <br />
-    <h2 align="center">
-EC2
-    </h2>
+    <h1 align="center">
+Lambda λ
+    </h1>
 </p>
-- [EC2](EC2.md) 💻
-- 
+
+
+ 
 - [Lambda](Lambda.md) 🔧
 - [ECS](ECS.md) 🐋
 - [EKS](EKS.md) 🛞
@@ -302,7 +300,6 @@ EC2
 ### 🖥️ ****Desenvolvimento (32%)****
 
 - [API Gateway](API-Gateway.md) 🌐
-- [Lambda](Lambda.md) λ
 - [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
 - [CodeArtifact](CodeArtifact.md) 📦
 - [CodeBuild](CodeBuild.md) ⚙️
