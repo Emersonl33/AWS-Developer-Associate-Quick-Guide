@@ -153,9 +153,17 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
 
 Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
+<br>
+<br>
 
-
-- [Cognito](Cognito.md) 👤
+<p align= "center">
+  <img src="./icons/aws-Cognito.png" alt="IAM-icon" style="height:120px; width:120px;"/>
+<br />
+    <h3 align="center">
+COGNITO
+    </h3>
+</p>
+<br />
 
 
 ### 🖥️ ****Computacão****
