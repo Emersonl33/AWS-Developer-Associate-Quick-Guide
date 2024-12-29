@@ -48,7 +48,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
   Segurança e Identidade🔒 
 </h1>
 <p align= "center">
-  <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
+  <img src="./Icons/Arch_AWS-Identity-and-Access-Management_64%405x.png" alt="IAM-icon" style="height:160px; width:160px;"/>
 <br />
     <h2 align="center">
 IAM
@@ -158,7 +158,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 <br>
 
 <p align= "center">
-  <img src="/Icons/Arch_Amazon-Cognito_64%405x.png" alt="COGNITO-icon" style="height:120px; width:120px;"/>
+  <img src="/Icons/Arch_Amazon-Cognito_64%405x.png" alt="COGNITO-icon" style="height:160px; width:160px;"/>
 <br />
     <h3 align="center">
 COGNITO
@@ -195,10 +195,10 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 <h1 align= "center"> 
   🖥️ Computação
 </h1>
-<p align= "left">
-  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:120px; width:120px;"/>
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:160px; width:160px;"/>
 <br />
-    <h2 align="left">
+    <h2 align="center">
 EC2
     </h2>
 </p>
