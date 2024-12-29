@@ -71,7 +71,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 ## Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
 - Políticas gerenciadas são criadas e mantidas pela AWS (ou pelo usuário) para ser aplicada a múltiplos usuários, grupos ou roles, como a política AmazonS3ReadOnlyAccess que concede permissões de leitura em todos os buckets S3.
 Exemplo da estrutura de uma *policy* no formato JSON
-
+<br>
 ```JSON
 {
   "Version": "2012-10-17",
@@ -91,7 +91,7 @@ Exemplo da estrutura de uma *policy* no formato JSON
 }
 ```
 <br />
-- Trust policies (ou "políticas de confiança") na AWS são um tipo de política associada a uma role (função) que define quem pode assumir essa role. Elas determinam quais entidades (usuários, serviços ou contas) têm permissão para "assumir" a role e agir com as permissões atribuídas a ela.
+- Trust policies (ou "políticas de confiança") na AWS são um tipo de política associada a uma role (função) que define quem pode assumir essa role. Elas determinam quais entidades (usuários, serviços ou contas) têm permissão para "assumir" a role e agir com as permissões atribuídas a ela. <br>
 Exemplo da estrutura de uma *Trust policy* no formato JSON
 
 ```JSON
@@ -110,6 +110,8 @@ Exemplo da estrutura de uma *Trust policy* no formato JSON
 ```
 <br />
 - Política Baseada em Recursos: É aplicada diretamente a um recurso da AWS (como um bucket S3 ou uma fila SQS) para controlar quem pode acessar esse recurso, como uma política de bucket S3 que permite que um usuário de outra conta acesse seus objetos.
+<br>
+
 ```JSON
 {
   "Version": "2012-10-17",
@@ -127,7 +129,6 @@ Exemplo da estrutura de uma *Trust policy* no formato JSON
 ```
 <br />
 
-<br />
 - [Cognito](Cognito.md) 👤
 
 
