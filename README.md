@@ -60,7 +60,7 @@ O IAM (Identity Access Management) é o gerenciador de permissões e acessos da 
 Com ele é possível criar usuários, grupos, definir políticas de permissões e criar roles.
 <br>
 <br>
-#### Usuários, Grupos, Políticas, Roles
+### Usuários, Grupos, Políticas, Roles
 - Cada conta AWS é, na verdade, um usuário ###root.
 - Um usuário do IAM, é um user criado por uma conta root que vem por default sem nenhum acesso permitido, portanto, sem poder acessar nenhum recurso ou serviço da AWS.
 - Um grupo IAM pode conter vários usuários IAM. **Um grupo do IAM NÃO pode conter outro grupo IAM**.
