@@ -45,10 +45,10 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - Containers
 
 <h1 align= "center"> 
-  🔒 **Segurança e Identidade**
-  <br />
+  Segurança e Identidade🔒 
 </h1>
 <p align= "center">
+  <br />
   <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
 <br />
     <h2 align="center">
