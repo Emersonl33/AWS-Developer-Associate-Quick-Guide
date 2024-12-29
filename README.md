@@ -195,10 +195,10 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 <h1 align= "center"> 
   🖥️ Computação
 </h1>
-<p align= "center">
-  <img src="./icons/aws-EC2.png" alt="EC2-icon" style="height:120px; width:120px;"/>
+<p align= "left">
+  <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:120px; width:120px;"/>
 <br />
-    <h2 align="center">
+    <h2 align="left">
 EC2
     </h2>
 </p>
