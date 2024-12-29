@@ -158,7 +158,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 <br>
 
 <p align= "center">
-  <img src="./icons/aws-Cognito.png" alt="COGNITO-icon" style="height:120px; width:120px;"/>
+  <img src="/Icons/Arch_Amazon-Cognito_64%405x.png" alt="COGNITO-icon" style="height:120px; width:120px;"/>
 <br />
     <h3 align="center">
 COGNITO
