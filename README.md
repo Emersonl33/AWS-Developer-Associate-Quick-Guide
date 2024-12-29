@@ -70,8 +70,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 
 ## Políticas Gerenciadas pela AWS, Políticas de confiança, Políticas baseadas em recurso
 - Políticas gerenciadas são criadas e mantidas pela AWS (ou pelo usuário) para ser aplicada a múltiplos usuários, grupos ou roles, como a política AmazonS3ReadOnlyAccess que concede permissões de leitura em todos os buckets S3.
-Exemplo da estrutura de uma *policy* no formato JSON
-<br>
+
 ```JSON
 {
   "Version": "2012-10-17",
