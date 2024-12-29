@@ -153,6 +153,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
 
 ## Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
+
 <br>
 <br>
 
@@ -186,6 +187,8 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 - User Pools são voltados para o gerenciamento de autenticação e dados dos usuários
 - Enquanto Identity Pools são usados para fornecer credenciais temporárias de acesso aos recursos da AWS para usuários autenticados ou anônimos.
 
+
+## Referência: https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html
 
 ### 🖥️ ****Computacão****
 
