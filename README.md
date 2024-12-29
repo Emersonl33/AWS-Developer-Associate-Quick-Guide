@@ -152,7 +152,8 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - **GetCallerIdentity:** Para retornar detalhes sobre o usuário IAM e a sua função(*role*) usada na chamada da API
 - **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
 
-## Referência: *https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html*
+## :books: Referências
+- *https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html*
 
 <br>
 <br>
@@ -187,8 +188,8 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 - User Pools são voltados para o gerenciamento de autenticação e dados dos usuários
 - Enquanto Identity Pools são usados para fornecer credenciais temporárias de acesso aos recursos da AWS para usuários autenticados ou anônimos.
 
-
-## Referência: *https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html*
+## :books: Referências
+- *https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html*
 <br />
 <br />
 
@@ -282,6 +283,9 @@ O Auto Scaling group é um utilizado para aumentar ou diminuir o número de inst
 - Notificações de escalonamento: Permite configurar notificações quando eventos de escalonamento ocorrem, como a adição ou remoção de instâncias.
 - Capacidade de escalonamento vertical: Permite aumentar ou diminuir a capacidade de instâncias EC2 no grupo (como a alteração do tipo de instância).
 - Suporte a instâncias spot: Pode incluir instâncias spot no grupo de Auto Scaling, aproveitando os preços mais baixos das instâncias não reservadas.
+
+## :books: Referências
+ - *https://aws.amazon.com/pt/ec2/?trk=ca05c99e-6c1c-48b2-a660-7554e13f56fc&sc_channel=ps&s_kwcid=AL!4422!10!71880800487097!71881323169036&ef_id=438f66dd4d9216f2fec501acd579c9cf:G:s&msclkid=438f66dd4d9216f2fec501acd579c9cf*
 
 <p align= "center">
   <img src="./Icons/Arch_AWS-Lambda_64%405x.png" alt="Lambda-icon" style="height:180px; width:180px;"/>
