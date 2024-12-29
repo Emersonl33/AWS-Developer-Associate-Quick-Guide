@@ -48,7 +48,12 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 
 <p align= "center">
   <img src="./icons/aws-IAM.png" alt="IAM-icon" style="height:120px; width:120px;"/>
-  
+<br />
+    <h1 align="center">
+IAM
+    </h1>
+</p>
+<br />
   
 - [Cognito](Cognito.md) 👤
 
