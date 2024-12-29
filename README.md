@@ -190,9 +190,9 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 
 ### Referência: https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html
 
-<h4 align= "center"> 
+<h1 align= "center"> 
   🖥️ Computacão
-</h4>
+</h1>
 <p align= "center">
   <img src="./icons/aws-IAM.png" alt="EC2-icon" style="height:120px; width:120px;"/>
 <br />
