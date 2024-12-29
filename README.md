@@ -28,7 +28,7 @@ Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev
 
 # Conteúdo do Exame 📚🌐
 Nessa secão vou organizar o conteúdo do exame de acordo com o tipo do serviço.
-<br>
+
 Alguns grupos de serviços são considerados essenciais para compreensão do funcionamento básico de uma topologia cloud, é boa ideia comećar por aqui:
 - Identidade e Segurança
 - Computação
@@ -36,10 +36,10 @@ Alguns grupos de serviços são considerados essenciais para compreensão do fun
 - Redes
 - Bancos de dados
 - Observabilidade e Auditoria
-<br>
-Esses são os grupos focados em desenvolvimento na AWS, e é aqui que fica a carga de complexidade desse exame, A AWS vai fazer muitas perguntas relacionadas ao funcionamento e como resolver problemas utilizando eles:
+
+O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui que fica a carga de complexidade desse exame, A AWS vai fazer muitas perguntas relacionadas ao funcionamento detalhado desses serviços e como resolver problemas utilizando eles:
 - Deploy
-- DeV Tools 
+- DeV Tools
 - App integration
 - Data Ingestion and Analytics
 - Containers
