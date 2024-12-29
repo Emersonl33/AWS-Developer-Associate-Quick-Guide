@@ -188,7 +188,7 @@ O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (c
 - Enquanto Identity Pools são usados para fornecer credenciais temporárias de acesso aos recursos da AWS para usuários autenticados ou anônimos.
 
 
-### Referência: https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html
+## Referência: *https://docs.aws.amazon.com/pt_br/cognitoidentity/latest/APIReference/Welcome.html*
 <br />
 <br />
 
