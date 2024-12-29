@@ -152,7 +152,7 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 - **GetCallerIdentity:** Para retornar detalhes sobre o usuário IAM e a sua função(*role*) usada na chamada da API
 - **DecodeAuthorizationMessage:** Para descriptografar mensagens de erro quando uma API da AWS é negada
 
-Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
+## Referência: https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html
 <br>
 <br>
 
