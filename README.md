@@ -416,7 +416,10 @@ A versão $LATEST não deve ser utilizada em ambientes de produção.
 
 ## Execução no ambiente VPC
 - Sempre que você precisar acessar recursos que estão limitadas a uma VPC ou sub rede privada, é necessário colocar sua função Lambda dentro dessa VPC
-
+## :books: Referências
+ - *https://docs.aws.amazon.com/lambda/*
+<br />
+<br />
   
 ## Como Usar Este Repositório 🧑‍💻
 
