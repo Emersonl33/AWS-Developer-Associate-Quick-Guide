@@ -835,7 +835,7 @@ Imagine que você tem uma aplicação complexa com várias partes conversando en
 <br />
 <h1 align= "center">
 <p align= "center">
-  <img src=".Icons/Arch_AWS-Command-Line-Interface_64%405x.png" alt="CLI-icon" style="height:180px; width:180px;"/>
+  <img src="./Icons/Arch_AWS-Command-Line-Interface_64%405x.png" alt="CLI-icon" style="height:180px; width:180px;"/>
 <br />
     <h1 align="center">
 CLI
