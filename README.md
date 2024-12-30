@@ -981,10 +981,10 @@ print(response['Payload'].read().decode('utf-8'))
 <br />
 
 <p align= "center">
-  <img src="./Icons/Arch_AWS-Cloud-Development-Kit_64%405x.png" alt="SDK-icon" style="height:180px; width:180px;"/>
+  <img src="./Icons/Arch_AWS-Cloud-Development-Kit_64%405x.png" alt="CDK-icon" style="height:180px; width:180px;"/>
 <br />
     <h1 align="center">
-SDK
+CDK
     </h1>
 </p>
 
