@@ -598,16 +598,16 @@ Se você tem uma tabela de usuários, a chave de partição poderia ser o ID do 
 
 ## Índices
 - Tanto os Índices Globais Secundários (GSI) quanto os Índices Secundários Locais (LSI) são usados para melhorar o desempenho das consultas
-| Característica                      | **GSI (Índice Global Secundário)**                   | **LSI (Índice Secundário Local)**                 |
+| Característica                       |  **GSI (Índice Global Secundário)**                   | **LSI (Índice Secundário Local)**               |
 |--------------------------------------|------------------------------------------------------|--------------------------------------------------|
 | **Chave de Partição**                | Pode ser diferente da chave de partição da tabela    | Deve ser a mesma chave de partição da tabela     |
-| **Chave de Classificação**           | Pode ser diferente da chave de classificação da tabela | Pode ser diferente da chave de classificação da tabela |
-| **Capacidade de Leitura/Gravação**   | Capacidade independente da tabela principal         | Compartilha a capacidade da tabela principal     |
-| **Escalabilidade**                   | Escalável de forma independente                     | Não escalável independentemente                 |
-| **Número Máximo de Índices**        | Ilimitado (dentro dos limites da conta)              | Máximo de 5 por tabela                          |
-| **Consistência de Leitura**          | Eventual (ou forte, se configurado)                  | Consistente forte por padrão                    |
-| **Uso Principal**                    | Flexibilidade em consultas e alto desempenho         | Consultas eficientes quando a chave de partição é constante |
-| **Criação**                          | Pode ser criada depois da tabela                     | Só pode ser criada no momento da criação da tabela |
+| **Chave de Classificação**           | Pode ser diferente da chave de classificação da tabela | Pode ser diferente da chave de classificação da tabela|
+| **Capacidade de Leitura/Gravação**   | Capacidade independente da tabela principal         | Compartilha a capacidade da tabela principal      |
+| **Escalabilidade**                   | Escalável de forma independente                     | Não escalável independentemente                   |
+| **Número Máximo de Índices**         | Ilimitado (dentro dos limites da conta)              | Máximo de 5 por tabela                           |
+| **Consistência de Leitura**          | Eventual (ou forte, se configurado)                  | Consistente forte por padrão                     |
+| **Uso Principal**                    | Flexibilidade em consultas e alto desempenho         | Consultas eficientes quando a chave de partição é constante|
+| **Criação**                          | Pode ser criada depois da tabela                     | Só pode ser criada no momento da criação da tabela|
 
 
 ## Buscas
