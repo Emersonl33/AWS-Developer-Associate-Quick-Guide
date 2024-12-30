@@ -443,7 +443,77 @@ O Auto Scaling group é um utilizado para aumentar ou diminuir o número de inst
  - *https://aws.amazon.com/pt/ec2/?trk=ca05c99e-6c1c-48b2-a660-7554e13f56fc&sc_channel=ps&s_kwcid=AL!4422!10!71880800487097!71881323169036&ef_id=438f66dd4d9216f2fec501acd579c9cf:G:s&msclkid=438f66dd4d9216f2fec501acd579c9cf*
 <br />
 <br />
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-Elastic-Container-Service_64%405x.png" alt="EC2-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+EC2
+    </h1>
+</p>
 
+O Amazon Elastic Container Service (ECS) é um serviço da AWS que facilita a execução, o gerenciamento e a escalabilidade de contêineres Docker na nuvem. Ele é amplamente utilizado para orquestrar contêineres, permitindo que você execute suas aplicações de forma eficiente e sem se preocupar com a infraestrutura subjacente. O ECS oferece uma plataforma robusta para desenvolver, testar e implantar aplicações em contêineres em grande escala.
+
+## Task Definitions
+- Uma Task Definition (ou definição de tarefa) é uma especificação detalhada que descreve como um container deve ser executado no ECS. As task definitions definem os parâmetros de execução para uma ou mais containers, funcionando como um "plano de execução" para as tarefas.
+- Executar contêineres no ECS: Toda tarefa ou serviço ECS precisa de uma definição de tarefa.
+- Gerenciar configurações de contêineres: Permite que você defina as configurações de seus contêineres (imagem, variáveis de ambiente, limites de recursos, etc.).
+- Automatizar implementações: Se você está automatizando a implementação de contêineres em um cluster ECS, as task definitions são essenciais.
+
+```JSON
+{
+  "family": "my-task-family",
+  "containerDefinitions": [
+    {
+      "name": "my-container",
+      "image": "my-docker-image:latest",
+      "cpu": 256,
+      "memory": 512,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "environment": [
+        {
+          "name": "MY_ENV_VAR",
+          "value": "my-value"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/my-task",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "my-container"
+        }
+      }
+    }
+  ]
+}
+```
+
+## Volumes
+- Host Volumes: Esses volumes são armazenados no próprio sistema de arquivos da instância EC2 que está executando a tarefa. São úteis quando você quer compartilhar dados entre múltiplos containers na mesma instância ou manter dados temporários.
+- EFS Volumes (Amazon Elastic File System): Permite armazenar dados de forma persistente e acessível fora do ciclo de vida da instância. Os volumes EFS são ideais para dados que precisam ser compartilhados entre várias tarefas ou que precisam ser armazenados independentemente do ciclo de vida das tarefas. Funciona tanto para clusters baseados em EC2 quanto para Fargate, desde que a rede seja configurada corretamente.
+- Ephemeral Storage: Armazenamento temporário específico do container em execução. O armazenamento efêmero é configurável em Fargate e pode ser configurado para tamanhos de até 200 GB.
+
+## Task Placements
+- Binpack: Coloca o máximo de tarefas possível em uma única instância para minimizar o número de instâncias usadas. Ideal para reduzir custos com instâncias EC2, pois maximiza o uso de recursos em cada instância. As tarefas são agrupadas nas instâncias com mais CPU e memória disponível, até que a capacidade seja preenchida.
+- Spread: Distribui as tarefas de maneira uniforme entre instâncias, zonas de disponibilidade (Availability Zones) ou instâncias com base em atributos específicos. Ideal para aplicações sensíveis à disponibilidade ou que precisam de balanceamento de carga entre diferentes recursos
+- Random: Coloca as tarefas aleatoriamente no cluster, distribuindo-as entre instâncias sem considerar a otimização de recursos.
+
+## ECS Copilot
+- AWS Copilot é uma ferramenta de linha de comando projetada para simplificar o processo de implantação e gerenciamento de aplicações conteinerizadas no Amazon Elastic Container Service (ECS) e AWS Fargate
+- Melhores Práticas Integradas: O Copilot aplica automaticamente as melhores práticas para segurança, escalabilidade e monitoramento.
+- Integração CI/CD: Facilita fluxos de trabalho de implantação contínua com opções de CI/CD integradas
+- Usa arquivos YAML para definir configurações de serviço, tornando fácil personalizar implantações.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/ecs/*
+<br />
+<br />
 <p align= "center">
   <img src="./Icons/Arch_AWS-Lambda_64%405x.png" alt="Lambda-icon" style="height:180px; width:180px;"/>
 <br />
