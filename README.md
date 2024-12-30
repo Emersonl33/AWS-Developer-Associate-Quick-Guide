@@ -1016,10 +1016,9 @@ class MeuStack(core.Stack):
 - App: É o ponto de entrada do seu código CDK
 - Stack: Representa uma unidade lógica de infraestrutura (equivalente a um stack no CloudFormation).
 - Constructs: Blocos básicos usados para criar recursos. Existem três tipos principais:
-<br>
-L1 (Low-level Constructs): Representam diretamente os recursos do CloudFormation.
-L2 (High-level Constructs): Abstrações simplificadas, como criar buckets S3 com configurações padrão.
-L3 (Patterns): Conjuntos de recursos pré-configurados para cenários específicos (ex.: aplicações web serverless).
+L1 (Low-level Constructs): Representam diretamente os recursos do CloudFormation.<br>
+L2 (High-level Constructs): Abstrações simplificadas, como criar buckets S3 com configurações padrão.<br>
+L3 (Patterns): Conjuntos de recursos pré-configurados para cenários específicos (ex.: aplicações web serverless).<br>
 
 ## :books: Referências
  - *https://docs.aws.amazon.com/cdk/*
