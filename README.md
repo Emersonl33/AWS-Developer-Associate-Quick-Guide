@@ -447,7 +447,7 @@ O Auto Scaling group é um utilizado para aumentar ou diminuir o número de inst
   <img src="./Icons/Arch_Amazon-Elastic-Container-Service_64%405x.png" alt="EC2-icon" style="height:180px; width:180px;"/>
 <br />
     <h1 align="center">
-EC2
+ECS
     </h1>
 </p>
 
