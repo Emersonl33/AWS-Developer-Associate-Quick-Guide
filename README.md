@@ -607,7 +607,8 @@ Se você tem uma tabela de usuários, a chave de partição poderia ser o ID do 
 | **Número Máximo de Índices**        | Ilimitado (dentro dos limites da conta)              | Máximo de 5 por tabela                          |
 | **Consistência de Leitura**          | Eventual (ou forte, se configurado)                  | Consistente forte por padrão                    |
 | **Uso Principal**                    | Flexibilidade em consultas e alto desempenho         | Consultas eficientes quando a chave de partição é constante |
-| **Criação**                    | Pode ser criada depois da tabela       | Só pode ser criada no momento da criação da tabela |
+| **Criação**                          | Pode ser criada depois da tabela                     | Só pode ser criada no momento da criação da tabela |
+
 
 ## Buscas
 - Scan (Busca Completa): O Scan percorre toda a tabela, lendo todos os itens e verificando se atendem aos critérios fornecidos. Isso é menos eficiente, pois lê todos os dados da tabela, e não apenas um subconjunto.
@@ -616,11 +617,11 @@ Se você tem uma tabela de usuários, a chave de partição poderia ser o ID do 
 Índice Secundário Local (LSI): Usado para consultas que mantêm a mesma chave de partição da tabela principal, mas permitem uma chave de ordenação diferente. O LSI oferece uma busca mais eficiente dentro de uma partição. Se sua tabela tem ID do usuário como chave de partição e ID do pedido como chave de ordenação, um LSI poderia ser criado usando data do pedido como chave de ordenação. Você poderia consultar todos os pedidos feitos por um usuário em uma data específica.
 
 ## WCUs e RCUs
-- WCUs (Write Capacity Units) e RCUs (Read Capacity Units) são unidades de capacidade que determinam a quantidade de leitura e gravação que uma tabela pode suportar. Elas são essenciais para o controle de desempenho e custos em uma tabela DynamoDB com capacidade provisionada.
 | **Capacidade**                | **Unidade de Medição**                         | **Descrição**                                                                                     | **Exemplo**                                                                                              |
 |-------------------------------|------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | **Write Capacity Units (WCU)** | 1 WCU = 1 gravação de até 1 KB por segundo     | Define o número de gravações que a tabela pode suportar por segundo. Uma gravação maior consome mais WCUs. | Se você gravar um item de 3 KB, você precisará de 3 WCUs.                                               |
 | **Read Capacity Units (RCU)**  | 1 RCPU = 1 leitura de até 4 KB por segundo     | Define o número de leituras que a tabela pode suportar por segundo. Leitura eventualmente consistente consome menos RCUs. | Se você estiver lendo um item de 5 KB com leitura fortemente consistente, você precisará de 2 RCUs.      |
+
 
 ### **Cálculos de WCUs e RCUs**
 
