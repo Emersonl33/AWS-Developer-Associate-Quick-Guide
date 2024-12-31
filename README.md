@@ -1,6 +1,5 @@
 # AWS Certified Developer Associate - Study Guide 📚☁️
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7e22c594-31aa-4a32-901b-ae0c84669378" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 Esse repositório é um compilado com os pontos mais importantes de todo conteúdo que consumi durante minha preparação para a certificação **AWS Developer Associate**.
 <br>
