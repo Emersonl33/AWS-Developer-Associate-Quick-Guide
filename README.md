@@ -55,19 +55,28 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [**ACM**](ACM.md) 📜 
 - [**Cognito**](Cognito.md) 👥  
 - [**KMS**](KMS.md) 🔒  
-- [**WAF**](WAF.md) 🛡️
+- [**WAF**](WAF.md) 🔥
 
 ### 💾 ****Storage****
 - [**EBS**](EBS.md) 🧱
 - [**EFS**](EFS.md) 📂
 - [**S3**](S3.md) 🪣
-  
-### 🔑 ****Security, Identity, and Compliance****
-- [CloudWatch](CloudWatch.md) ⏰
-- [CloudTrail](CloudTrail.md) 📑
 
-- [API Gateway](API-Gateway.md) 🌐
+### 🖥️ ****Compute****
+- [**EC2**](EC2.md) 🖥️
+- [ECS](ECS.md) 🐋
+- [Lambda](Lambda.md) λ
+- [SAM (Serverless Application Model)](SAM.md) 🐿️
 - [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
+
+### 🎲 ****Banco de Dados****
+- [DynamoDB](DynamoDB.md) 📊
+- [RDS](RDS.md) 🗄️
+- [Aurora](Aurora.md) 🌌
+- [**ElastiCache**](ElastiCache.md) 🧷
+- [**MemoryDB**](MemoryDB.md) 🧠
+
+### 🚀 **Developer Tools**
 - [CodeArtifact](CodeArtifact.md) 📦
 - [CodeBuild](CodeBuild.md) ⚙️
 - [CodeDeploy](CodeDeploy.md) 🚀
@@ -75,27 +84,20 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [CodePipeline](CodePipeline.md) 🔄
 - [CodeStar](CodeStar.md) ⭐
 - [CloudFormation](CloudFormation.md) 🏗️
-- [SAM (Serverless Application Model)](SAM.md) 🐿️
 - [SDK (Software Development Kit)](SDK.md) 🔧
-- [CDK (Cloud Development Kit)](CDK.md) ☁️ 📦
+- [CDK (Cloud Development Kit)](CDK.md) ☁️
 - [X-Ray](X-Ray.md) 🔍
 
-### 💾 **Armazenamento**
-
-- [S3](S3.md) 🗂️
-- [EBS](EBS.md) 🗂️
-- [EFS](EFS.md) 🗂️
-
-### 🏗️ **Infra Estrutura**
-
-- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
- 
+ ### 🔑 ****Security, Identity, and Compliance****
+- [CloudWatch](CloudWatch.md) ⏰
+- [CloudTrail](CloudTrail.md) 📑
+  
 ### 🌐 **Rede**
-
+- [API Gateway](API-Gateway.md) 🌐
 - [Route 53](Route53.md) 🌍
 - [VPC](VPC.md) 🖧
 - [CloudFront](CloudFront.md) ⚡
-- [Global Acelerator](GlobalAcelerator.md) 📡
+- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
 
 ### 🔍 **Monitoramento**
 
@@ -107,11 +109,6 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [SNS](SNS.md) 📢
 - [Kinesis](Kinesis.md) 🔄
 
-### 🎲 **Banco de Dados**
-
-- [DynamoDB](DynamoDB.md) 📊
-- [Aurora](Aurora.md) 🌌
-- [RDS](RDS.md) 🗄️
 
 ### ⚡ **Eventos e Integração**
 
