@@ -1539,7 +1539,7 @@ O SQS (Simple Queue Service) é serviço fundamental para desenvolvimento dentro
 - Suporta alta taxa de mensagens. Não há um limite específico de throughput para filas Standard; elas são escaláveis e podem lidar com uma quantidade muito alta de mensagens simultaneamente.
 - As mensagens podem ser retidas na fila por até 14 dias, mas o padrão é de 4 dias. Após esse período, as mensagens são automaticamente removidas da fila.
 
-## FIFO
+## Filas FIFO
 - O SQS FIFO (First-In, First-Out) é um tipo de fila no Amazon Simple Queue Service (SQS) projetado para garantir que as mensagens sejam processadas na ordem exata em que foram enviadas.
 - As filas FIFO têm uma limitação de throughput. Por padrão, uma fila FIFO pode processar até 300 mensagens por segundo se não houver batching (envio de mensagens em lotes).
 
