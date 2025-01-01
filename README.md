@@ -49,7 +49,22 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [ECS](ECS.md) 🐋
 - [EKS](EKS.md) 🛞
 
-### 🖥️ ****Desenvolvimento (32%)****
+### 🔑 ****Security, Identity, and Compliance****
+- [**IAM**](IAM.md) 💳  
+- [**Secrets Manager**](Secrets-Manager.md) 🔐  
+- [**ACM**](ACM.md) 📜 
+- [**Cognito**](Cognito.md) 👥  
+- [**KMS**](KMS.md) 🔒  
+- [**WAF**](WAF.md) 🛡️
+
+### 💾 ****Storage****
+- [**EBS**](EBS.md) 🧱
+- [**EFS**](EFS.md) 📂
+- [**S3**](S3.md) 🪣
+  
+### 🔑 ****Security, Identity, and Compliance****
+- [CloudWatch](CloudWatch.md) ⏰
+- [CloudTrail](CloudTrail.md) 📑
 
 - [API Gateway](API-Gateway.md) 🌐
 - [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
@@ -84,8 +99,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 
 ### 🔍 **Monitoramento**
 
-- [CloudWatch](CloudWatch.md) ⏰
-- [CloudTrail](CloudTrail.md) 📑
+
   
 ### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
 
@@ -106,7 +120,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 <br/ >
 
 <h1 align= "center"> 
-🔒Segurança e Identidade👤
+🔒Security, Identity, and Compliance👤
 </h1>
 <p align= "center">
   <img src="./Icons/Arch_AWS-Identity-and-Access-Management_64%405x.png" alt="IAM-icon" style="height:180px; width:180px;"/>
@@ -570,7 +584,7 @@ Você paga apenas pelo que usa, sem necessidade de dimensionamento manual.
 <br />
 
 <h1 align= "center"> 
-  🖥️ Computação
+  🖥️Compute💻
 </h1>
 <p align= "center">
   <img src="./Icons/Arch_Amazon-EC2_64%405x.png" alt="EC2-icon" style="height:180px; width:180px;"/>
