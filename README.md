@@ -1376,6 +1376,56 @@ aws cloudwatch set-alarm-state --alarm-name "MyAlarm" --state-value "ALARM" --st
 <br />
 <br />
 
+<h1 align= "center"> 
+ 📊Analytics🔍
+<h1 />
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-Athena_64%405x.png" alt="Athena-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Athena
+    </h1>
+</p>
+
+O Athena é um serviço serverless de consulta sql que foi projetado para fazer consultas e análise de dados no s3. E essa é a informção mais útil para o exame =).
+
+## Formatos compatíveis
+- CSV, JSON, Parquet, ORC ou Avro.
+
+##  Preço
+- $5 USD por Terabyte Escaneado
+
+## Casos de Uso comuns
+- Logs: O athena é excelente para analisar logs de apps, servidores ou serviços<br>
+<br>
+Identificar o endereço IP com mais acessos ao servidor em logs do ELB.
+
+```sql
+SELECT client_ip, COUNT(*) AS total_requests
+FROM elb_logs
+GROUP BY client_ip
+ORDER BY total_requests DESC
+LIMIT 10;
+```
+
+- Data Lake e Big Data Analytics: Athena é frequentemente usado em arquiteturas de Data Lake para explorar grandes volumes de dados armazenados em formatos como Parquet e ORC.<br>
+<br>
+Analisar dados de vendas para insights de negócios, como produtos mais vendidos ou tendências sazonais.
+
+```sql
+SELECT produto, SUM(valor) AS total_vendas
+FROM vendas
+WHERE data BETWEEN '2024-01-01' AND '2024-12-31'
+GROUP BY produto
+ORDER BY total_vendas DESC;
+
+```
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/athena/*
+<br />
+<br />
+
 ## Como Usar Este Repositório 🧑‍💻
 
 1. **Navegação pelos Tópicos**: Cada diretório contém materiais específicos sobre um determinado serviço ou conceito. Abra os arquivos `.md` para ler os resumos, entender os conceitos principais e acessar links para mais detalhes, como a documentação oficial da AWS.
