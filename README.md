@@ -593,13 +593,6 @@ A versão $LATEST não deve ser utilizada em ambientes de produção.
 <br />
 <br />
 
-<p align= "center">
-  <img src="./Icons/Arch_AWS-Elastic-Beanstalk_64%405x.png" alt="ElasticBeanStalk-icon" style="height:180px; width:180px;"/>
-<br />
-    <h1 align="center">
-Elastic BeanStalk
-    </h1>
-</p>
 
 <p align= "center">
   <img src="./Icons/AWS-SAM.png" alt="StepFunctions-icon" style="height:180px; width:180px;"/>
@@ -650,6 +643,14 @@ my-sam-app/
  - *https://docs.aws.amazon.com/serverless-application-model/*
 <br />
 <br />
+
+<p align= "center">
+  <img src="./Icons/Arch_AWS-Elastic-Beanstalk_64%405x.png" alt="ElasticBeanStalk-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Elastic BeanStalk
+    </h1>
+</p>
 
 Esse com certeza é mais um tópico super importante para o Exame, e um dos meus serviços favoritos da AWS. <br>
 O AWS Elastic Beanstalk é uma maneira fácil de subir e gerenciar aplicações na nuvem sem precisar se preocupar com a infraestrutura. Em vez de configurar servidores, redes e bancos de dados manualmente, você só precisa focar no seu código, e o Beanstalk cuida do resto. <br>
