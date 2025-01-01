@@ -452,7 +452,7 @@ ECS
     </h1>
 </p>
 
-O Amazon Elastic Container Service (ECS) é um serviço da AWS que facilita a execução, o gerenciamento e a escalabilidade de contêineres Docker na nuvem. Ele é amplamente utilizado para orquestrar contêineres, permitindo que você execute suas aplicações de forma eficiente e sem se preocupar com a infraestrutura subjacente. O ECS oferece uma plataforma robusta para desenvolver, testar e implantar aplicações em contêineres em grande escala.
+O Amazon Elastic Container Service (ECS) é um serviço que facilita a execução, o gerenciamento e a escalabilidade de contêineres na nuvem.
 
 ## Task Definitions
 - Uma Task Definition (ou definição de tarefa) é uma especificação detalhada que descreve como um container deve ser executado no ECS. As task definitions definem os parâmetros de execução para uma ou mais containers, funcionando como um "plano de execução" para as tarefas.
