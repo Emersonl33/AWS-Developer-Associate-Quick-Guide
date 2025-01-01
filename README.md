@@ -1564,6 +1564,95 @@ O SQS (Simple Queue Service) é serviço fundamental para desenvolvimento dentro
 <br />
 <br />
 
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-Simple-Notification-Service_64%405x.png" alt="SNS-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+SNS
+    </h1>
+</p>
+
+
+O Amazon SNS (Simple Notification Service) é um serviço de mensagens da AWS que permite que você envie notificações para diferentes tipos de destinatários, como usuários, sistemas, ou aplicações, de forma simples e eficiente. Assim como o SQS, o SNS também serve para desacoplar aplicações. O SNS é ideal quando você quer um modelo pub/sub (Publicar e Assinar), onde você envia uma mensagem a um tópico e vários assinantes podem consumir essa mensagem ao mesmo tempo em tempo real. Mas não tem nenhum recurso nativo para reprocessamento da mensagem em caso de falha.
+
+## Componentes
+- Publicador (Publisher): Você pode ser o publicador (quem envia as mensagens). Por exemplo, uma aplicação ou sistema que precisa avisar os usuários sobre algo, como uma nova atualização, um alerta ou promoções.
+- Tópico (Topic): No SNS, as mensagens são enviadas para um tópico. Você pode pensar no tópico como uma lista de distribuição, ou seja, um grupo de pessoas ou sistemas para os quais você quer enviar uma mensagem.
+- - Assinantes (Subscribers): Os assinantes são as pessoas ou sistemas que recebem a mensagem que você enviou para o tópico. Eles podem ser de diferentes tipos, como: <br>
+SMS (mensagem de texto no celular)
+E-mail (através de AWS SES)
+HTTP(S) (enviar a mensagem para um servidor)
+Lambda (executar uma função quando uma mensagem chega)
+SQS (enviar para uma fila do Amazon SQS)
+
+## Problemas Comuns
+- Sobrecarga de mensagens e alta latência. Em vez de enviar muitas mensagens de uma vez, divida-as em lotes menores para garantir que o SNS possa processá-las com eficiência.
+- Mensagens perdidas: Use SNS com SQS e configure uma DLQ no SQS.
+- Tópicos sem assinantes ou assinantes não confirmados: Certifique-se de que todos os assinantes receberam e confirmaram a inscrição, especialmente em e-mails e SMS. No console do SNS, você pode verificar se o tópico tem assinantes ativos e se eles confirmaram sua inscrição.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/sns/*
+<br />
+<br />
+
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-EventBridge_64%405x.png" alt="Event-Bridge-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Event Bridge
+    </h1>
+</p>
+
+O Amazon EventBridge é um serviço da AWS que facilita a criação de arquiteturas de eventos e integrações entre diferentes aplicações, sistemas e serviços de forma desacoplada e em tempo real. Ele é uma evolução do Amazon CloudWatch Events e foi projetado para fornecer uma maneira mais robusta e flexível de gerenciar eventos em grande escala.
+- O EventBridge funciona através de eventos e regras. Um evento é uma mudança ou atividade que acontece em uma aplicação, serviço ou sistema. O EventBridge pode pegar esses eventos, aplicar regras para determinar o que fazer com eles, e então enviá-los para destinos como funções AWS Lambda, SQS, SNS, Kinesis, entre outros.
+- O Amazon EventBridge fornece uma API robusta para interação com eventos e regras. A API pode ser usada com o AWS SDK em várias linguagens de programação, ou diretamente com a AWS CLI para automação de processos.
+
+## Event Bus 
+- Um event bus é o "canal" por onde os eventos são enviados e processados. Quando você cria um event bus personalizado, ele pode receber eventos de fontes externas e de suas próprias aplicações.
+- API Reference: *CreateEventBus*
+- Exemplo SDK em Python - Boto3):
+
+``` python
+import boto3
+
+client = boto3.client('events')
+
+response = client.create_event_bus(
+    Name='my-custom-event-bus'
+)
+print(response)
+
+```
+
+## Rules
+- Rules: As regras são usadas para filtrar eventos e especificar as ações a serem realizadas quando um evento corresponder à condição da regra. Elas podem direcionar eventos para destinos como Lambda, SQS, SNS, entre outros.
+- API Reference: PutRule. Cria ou atualiza uma regra de evento no EventBridge.
+- Exemplo SDK em Python - Boto3):
+
+``` python
+import boto3
+
+client = boto3.client('events')
+
+response = client.put_rule(
+    Name='my-event-rule',
+    EventPattern='{"source": ["aws.ec2"]}',  # Filtra eventos da EC2
+    State='ENABLED',
+    Description='Regras para eventos da EC2'
+)
+print(response)
+
+```
+## Casos de uso
+- Desacoplamento de Sistemas: O EventBridge permite que diferentes partes de uma aplicação ou diferentes aplicações se comuniquem sem estarem fortemente acopladas. Por exemplo, uma aplicação de pedidos pode enviar eventos sobre o status do pedido para uma função Lambda, que pode, por sua vez, disparar uma notificação para o cliente via SNS.
+- Integração de Aplicações e Serviços: EventBridge facilita a integração de várias fontes e sistemas. Você pode integrar serviços AWS, suas próprias aplicações e até mesmo serviços externos, como aplicativos SaaS
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/pt_br/eventbridge/?id=docs_gateway*
+<br />
+<br />
+
+
 ## Como Usar Este Repositório 🧑‍💻
 
 1. **Navegação pelos Tópicos**: Cada diretório contém materiais específicos sobre um determinado serviço ou conceito. Abra os arquivos `.md` para ler os resumos, entender os conceitos principais e acessar links para mais detalhes, como a documentação oficial da AWS.
