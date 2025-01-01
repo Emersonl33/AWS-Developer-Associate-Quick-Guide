@@ -62,7 +62,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [CloudFormation](CloudFormation.md) 🏗️
 - [SAM (Serverless Application Model)](SAM.md) 🐿️
 - [SDK (Software Development Kit)](SDK.md) 🔧
-- [CDK (Cloud Development Kit)](CDK.md) ☁️
+- [CDK (Cloud Development Kit)](CDK.md) ☁️ 📦
 - [X-Ray](X-Ray.md) 🔍
 
 ### 💾 **Armazenamento**
@@ -1981,7 +1981,7 @@ Por exemplo, se você tem uma aplicação que precisa de dados de um banco de da
 <br />
 
 <h1 align= "center"> 
- 📲Networking and ContentDelivery🌐
+ ☁️Networking and Content Delivery📦
 <h1 />
 <p align= "center">
   <img src="./Icons/Arch_Amazon-API-Gateway_64%405x.png" alt="API-Gateway-icon" style="height:180px; width:180px;"/>
