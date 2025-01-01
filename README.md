@@ -106,7 +106,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 <br/ >
 
 <h1 align= "center"> 
-  Segurança e Identidade🔒 
+🔒Segurança e Identidade👤
 </h1>
 <p align= "center">
   <img src="./Icons/Arch_AWS-Identity-and-Access-Management_64%405x.png" alt="IAM-icon" style="height:180px; width:180px;"/>
