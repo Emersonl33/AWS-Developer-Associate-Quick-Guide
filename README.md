@@ -601,6 +601,56 @@ Elastic BeanStalk
     </h1>
 </p>
 
+<p align= "center">
+  <img src="./Icons/AWS-SAM.png" alt="StepFunctions-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+SAM
+    </h1>
+</p>
+
+O SAM é o nosso caçula aqui. Foi lançado em novembro de 2022 e é extremamente prático pro dia-a-dia. O AWS SAM é como uma ferramenta que ajuda você a montar uma aplicação serverless de forma rápida e fácil. Ele reduz o trabalho manual, organiza sua infraestrutura e facilita testes locais.
+
+## Quando usar o AWS SAM?
+
+- Use o AWS SAM sempre que estiver construindo uma aplicação serverless, especialmente se ela envolver:
+- Funções Lambda.
+- APIs gerenciadas pelo API Gateway.
+- Bancos de dados DynamoDB ou S3.
+- O exame pode te cobrar sobre testes de locais de funções lambda utilizando o CLI, por exemplo. E o SAM é a alternativa certa pra esse tipo de cenário.
+
+
+# Diretórios
+
+```plaintext
+my-sam-app/
+├── template.yaml         # Arquivo principal do SAM (infraestrutura como código)
+├── events/               # Exemplos de eventos para teste local
+│   ├── event.json
+├── src/                  # Código fonte das funções Lambda
+│   ├── app.py
+│   ├── requirements.txt  # Dependências da aplicação
+├── tests/                # Testes unitários e de integração
+│   ├── unit/
+│   │   ├── test_handler.py
+│   ├── integration/
+├── README.md             # Documentação do projeto
+
+```
+
+## Comandos para se lembrar
+- Comando -sam package: O SAM processa seu arquivo template.yaml, empacota o código da função Lambda e seus recursos auxiliares (como dependências) e os prepara para implantação.
+- Comando -sam deploy: Implanta no cloud formation
+
+## Transform (Isso é importante!)
+- O Transform é usado para simplificar a definição de recursos serverless no modelo YAML/JSON, traduzindo-os para recursos detalhados de CloudFormation.
+- Se o SAM é como um atalho para criar aplicações serverless, o Transform é o mecanismo que traduz esses atalhos em instruções completas para o CloudFormation.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/serverless-application-model/*
+<br />
+<br />
+
 Esse com certeza é mais um tópico super importante para o Exame, e um dos meus serviços favoritos da AWS. <br>
 O AWS Elastic Beanstalk é uma maneira fácil de subir e gerenciar aplicações na nuvem sem precisar se preocupar com a infraestrutura. Em vez de configurar servidores, redes e bancos de dados manualmente, você só precisa focar no seu código, e o Beanstalk cuida do resto. <br>
 **Imagine o seguinte:** <br>
