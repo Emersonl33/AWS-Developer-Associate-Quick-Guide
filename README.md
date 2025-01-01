@@ -595,7 +595,7 @@ A versão $LATEST não deve ser utilizada em ambientes de produção.
 
 
 <p align= "center">
-  <img src="./Icons/AWS-SAM.png" alt="Sam-icon" style="height:180px; width:180px;"/>
+  <img src="./Icons/AWS-SAM.png" alt="Sam-icon" style="height:210px; width:180px;"/>
 <br />
     <h1 align="center">
 SAM
