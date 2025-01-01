@@ -1614,7 +1614,7 @@ Step Functions
     </h1>
 </p>
 
-O AWS Step Functions é um serviço gerenciado da Amazon Web Services (AWS) que permite orquestrar fluxos de trabalho baseados em estados e ações, facilitando a execução de tarefas complexas. Com ele, você pode automatizar e coordenar processos que envolvem múltiplos serviços da AWS, como Lambda, SNS, SQS, DynamoDB, entre outros, criando aplicações baseadas em fluxos de trabalho visuais.
+O AWS Step Functions é um serviço gerenciado que permite orquestrar fluxos de trabalho baseados em estados e ações, facilitando a execução de tarefas complexas. Com ele, você pode automatizar e coordenar processos que envolvem múltiplos serviços da AWS, como Lambda, SNS, SQS, DynamoDB, entre outros, criando aplicações baseadas em fluxos de trabalho visuais.
 
 ## Principais conceitos
 - Máquina de Estados: A lógica do seu fluxo de trabalho é representada por uma máquina de estados, que define a sequência de estados e transições entre eles.
