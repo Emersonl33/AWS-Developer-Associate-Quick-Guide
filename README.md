@@ -44,11 +44,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - App integration
 - Data Ingestion and Analytics
 - Containers
-
-- [Lambda](Lambda.md) 🔧
-- [ECS](ECS.md) 🐋
-- [EKS](EKS.md) 🛞
-
+  
 ### 🔑 ****Security, Identity, and Compliance****
 - [**IAM**](IAM.md) 💳  
 - [**Secrets Manager**](Secrets-Manager.md) 🔐  
@@ -77,16 +73,17 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [**MemoryDB**](MemoryDB.md) 🧠
 
 ### 🚀 **Developer Tools**
+- [**Amplify**](Amplify.md) 📡  
+- [**CloudShell**](CloudShell.md) ☁️
 - [CodeArtifact](CodeArtifact.md) 📦
 - [CodeBuild](CodeBuild.md) ⚙️
 - [CodeDeploy](CodeDeploy.md) 🚀
 - [CodeCommit](CodeCommit.md) 💼
 - [CodePipeline](CodePipeline.md) 🔄
-- [CodeStar](CodeStar.md) ⭐
-- [CloudFormation](CloudFormation.md) 🏗️
-- [SDK (Software Development Kit)](SDK.md) 🔧
-- [CDK (Cloud Development Kit)](CDK.md) ☁️
 - [X-Ray](X-Ray.md) 🔍
+- [**CLI**](CLI.md) ⌨️
+- [SDK (Software Development Kit)](SDK.md) 🛠️
+- [CDK (Cloud Development Kit)](CDK.md) 🏗️
 
  ### 🔑 ****Security, Identity, and Compliance****
 - [CloudWatch](CloudWatch.md) ⏰
@@ -113,6 +110,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 ### ⚡ **Eventos e Integração**
 
 - [EventBridge](EventBridge.md) 🌩️
+- - [CloudFormation](CloudFormation.md) 🏗️
 
 <br/ >
 
