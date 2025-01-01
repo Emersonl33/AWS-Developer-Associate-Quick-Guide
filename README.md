@@ -215,22 +215,91 @@ Com ele é possível criar usuários, grupos, definir políticas de permissões 
 
 ## :books: Referências
 - *https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html*
+<br>
+<br>
 
-<br>
-<br>
+<p align= "center">
+  <img src="./Icons/Arch_AWS-Secrets-Manager_64%405x.png" alt="Secrets-Manager-icon" style="height:180px; width:180px;"/>
+<br />
+    <h2 align="center">
+Secrets Manager
+    </h2>
+</p>
+<br />
+ O AWS Secrets Manager foi projetado para armazenar credenciais, como senhas de banco de dados, chaves de API e tokens de autenticação, com suporte a rotação automática, auditoria e acesso controlado.
+
+ ## Features
+ - Os segredos são criptografados automaticamente usando AWS KMS.
+ - O Secrets Manager suporta a rotação automática de segredos
+ - Integra-se com bancos de dados compatíveis, como Amazon RDS, Aurora, MySQL, PostgreSQL, SQL Server, entre outros, para atualizar automaticamente credenciais armazenadas no serviço.
+ - Usando AWS Identity and Access Management (IAM), você pode controlar quem pode acessar ou gerenciar segredos.
+ - Totalmente integrado ao AWS CloudTrail, o Secrets Manager registra todas as ações realizadas nos segredos, como criação, acesso, rotação e exclusão.
+ 
+ ## Custos
+ - Armazenamento de segredos: Cada segredo armazenado é cobrado mensalmente.
+ - Uso de API: Há cobrança por solicitações adicionais de API (além de um limite gratuito inicial).
+
+ # Diferenças com o SSM Parameter Store
+
+| **Característica**                 | **AWS Secrets Manager**                   | **SSM Parameter Store**                      |
+|------------------------------------|------------------------------------------|---------------------------------------------|
+| **Rotação automática**             | Sim, integrada nativamente.              | Não nativa (requer funções Lambda).         |
+| **Custos**                         | Maior, devido à funcionalidade avançada. | Menor, ideal para casos de uso simples.     |
+| **Tipo de dados suportados**       | Strings, JSON e binários.                | Strings simples e criptografadas (`SecureString`). |
+| **Gerenciamento de segredos**      | Avançado, com suporte a rotação, auditoria e integração. | Básico, com foco em parâmetros e segredos simples. |
+| **Integração com bancos de dados** | Sim, com suporte a rotação automática.   | Não diretamente.                           |
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/secretsmanager/*
+<br />
+<br />
+
+<p align= "center">
+  <img src="./Icons/Arch_AWS-Certificate-Manager_64%405x.png" alt="ACM-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+ACM - AWS Certificate Manager
+    </h1>
+</p>
+
+Facilita a criação, gerenciamento e implantação de certificados SSL/TLS para proteger sites e aplicativos na web. Esses certificados são usados para criptografar a comunicação entre os clientes (como navegadores ou dispositivos) e os servidores (como instâncias EC2, Elastic Load Balancers, etc.) 
+
+## Principais Funções do AWS ACM:
+- É possível emitir certificados públicos para domínios que você possui ou certificados privados para uso interno, como dentro de uma VPC (Virtual Private Cloud).
+- O serviço permite gerenciar todos os certificados SSL/TLS em um único lugar. Você pode facilmente ver, renovar, revogar e implantar seus certificados.
+- O ACM se integra de forma nativa com outros serviços da AWS, como Elastic Load Balancing (ELB), Amazon CloudFront, Amazon API Gateway, e AWS Elastic Beanstalk.
+
+## Como funciona
+- Você solicita um certificado no AWS ACM, seja para um domínio específico ou para múltiplos domínios (usando o tipo SAN - Subject Alternative Name).
+- O ACM valida a propriedade do domínio, geralmente enviando um email de verificação ou pedindo uma verificação DNS.
+- Após a emissão do certificado, você pode associá-lo automaticamente com serviços da AWS, como ELB, CloudFront ou API Gateway. Esses serviços podem gerenciar a instalação do certificado para você.
+- O certificado pode ser usado para HTTPS, garantindo que as comunicações entre clientes e servidores sejam criptografadas.
+- O ACM pode renovar automaticamente seus certificados antes que eles expirem. Isso reduz o risco de problemas de segurança causados por certificados expirados.
+
+## Casos de uso
+- Você possui um site hospedado em um Elastic Load Balancer (ELB) e deseja garantir que ele seja acessado via HTTPS (com criptografia SSL/TLS).
+
+## Limitações 
+- O ACM não oferece suporte para certificados de terceiros (por exemplo, se você já possui um certificado adquirido fora da AWS).
+- Para a validação de domínio, você precisa ser capaz de modificar os registros DNS ou acessar os emails relacionados ao domínio para completar o processo de validação.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/acm/*
+<br />
+<br />
 
 <p align= "center">
   <img src="/Icons/Arch_Amazon-Cognito_64%405x.png" alt="COGNITO-icon" style="height:180px; width:180px;"/>
 <br />
     <h1 align="center">
-COGNITO
+Cognito
     </h1>
 </p>
 <br />
 
 O Cognito é um serviço de autenticação e gereciamento de usuários para aplicações mobile e web. Ele permite criar, autenticar e gerenciar usuários, além de fornecer funcionalidades como login social (Facebook, Google, Amazon) e login empresarial (Active Directory, SAML), sem a necessidade de desenvolver um sistema de autenticação no backend. 
 
-### Cognito User Pools
+## Cognito User Pools
 O Cognito User Pool é um diretório permite autenticar e gerenciar **Usuários** 
 
 - Autenticação de usuários: Permite criar e gerenciar usuários para sua aplicação, oferecendo funcionalidades como registro, login, redefinição de senha e verificação de e-mail.
@@ -238,14 +307,14 @@ O Cognito User Pool é um diretório permite autenticar e gerenciar **Usuários*
 - MFA (Autenticação Multifatorial): Protege o login dos usuários, exigindo mais de uma verificação para garantir maior segurança.
 - Customização: Oferece personalização de fluxos de autenticação, como validação de campos, formulários de cadastro e mensagens de erro.
   
-### Cognito Identity Pools
+## Cognito Identity Pools
 O Cognito Identity Pool permite fornecer acesso temporário a recursos da AWS (como S3, DynamoDB, etc.) para usuários autenticados, mesmo que esses usuários não estejam registrados no User Pool. Ele oferece:
 
 - Autenticação federada: Permite que usuários de diferentes fontes de autenticação (como User Pools, provedores de login social, ou até usuários anônimos) obtenham credenciais da AWS.
 - Acesso a recursos AWS: Usando o serviço AWS STS (Security Token Service), o Cognito Identity Pool fornece credenciais temporárias para acessar recursos da AWS de forma segura.
 - Suporte a usuários anônimos: Permite a interação de usuários não autenticados com os serviços da AWS, mantendo uma camada de segurança e controle de acesso.
 
-### Diferença principal entre User Pools e Identity Pools:
+## Diferença principal entre User Pools e Identity Pools:
 - User Pools são voltados para o gerenciamento de autenticação e dados dos usuários
 - Enquanto Identity Pools são usados para fornecer credenciais temporárias de acesso aos recursos da AWS para usuários autenticados ou anônimos.
 
