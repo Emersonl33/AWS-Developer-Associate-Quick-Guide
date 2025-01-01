@@ -69,7 +69,7 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [DynamoDB](DynamoDB.md) 📊
 - [RDS](RDS.md) 🗄️
 - [Aurora](Aurora.md) 🌌
-- [**ElastiCache**](ElastiCache.md) 🧷
+- [**ElastiCache**](ElastiCache.md) 🌀
 - [**MemoryDB**](MemoryDB.md) 🧠
 
 ### 🚀 **Developer Tools**
@@ -85,33 +85,32 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [SDK (Software Development Kit)](SDK.md) 🛠️
 - [CDK (Cloud Development Kit)](CDK.md) 🏗️
 
- ### 🔑 ****Security, Identity, and Compliance****
+### 💼 **Gerenciamento e Governança** 📜
+- [**Systems Manager**](Systems-Manager.md) 🗂️  
+- [**AppConfig**](AppConfig.md) 🧩  
+- [**CloudFormation**](CloudFormation.md) 🏗️
 - [CloudWatch](CloudWatch.md) ⏰
 - [CloudTrail](CloudTrail.md) 📑
-  
-### 🌐 **Rede**
-- [API Gateway](API-Gateway.md) 🌐
-- [Route 53](Route53.md) 🌍
-- [VPC](VPC.md) 🖧
-- [CloudFront](CloudFront.md) ⚡
-- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
 
-### 🔍 **Monitoramento**
-
-
-  
-### 🚀 **Desenvolvimento de Aplicações e Integração com AWS**
-
-- [SQS](SQS.md) 📦
-- [SNS](SNS.md) 📢
+### 🔍 **Analytics**  
+- [**Athena**](Athena.md) 🏛️  
+- [**OpenSearch**](OpenSearch.md) 🔍  
 - [Kinesis](Kinesis.md) 🔄
 
-
-### ⚡ **Eventos e Integração**
-
-- [EventBridge](EventBridge.md) 🌩️
-- - [CloudFormation](CloudFormation.md) 🏗️
-
+### 📲 **App Integration** 🌐
+- [SQS](SQS.md) 📦
+- [SNS](SNS.md) 📢
+- [EventBridge](EventBridge.md) 🚨
+- [**Step Functions**](StepFunctions.md) 🧭  
+- [**AppSync**](AppSync.md) 🔗
+  
+### ☁️ **Networking and Content Delivery** 📦
+- [API Gateway](API-Gateway.md) 🌐
+- [CloudFront](CloudFront.md) ⚡
+- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
+- [Route 53](Route53.md) 🌍
+- [VPC](VPC.md) 🖧
+  
 <br/ >
 
 <h1 align= "center"> 
