@@ -616,7 +616,7 @@ O SAM é o nosso caçula aqui. Foi lançado em novembro de 2022 e é extremament
 - Funções Lambda.
 - APIs gerenciadas pelo API Gateway.
 - Bancos de dados DynamoDB ou S3.
-- O exame pode te cobrar sobre testes de locais de funções lambda utilizando o CLI, por exemplo. E o SAM é a alternativa certa pra esse tipo de cenário.
+- **O exame pode cobrar sobre testes locais de funções lambda utilizando o CLI, por exemplo. E o SAM é a alternativa certa pra esse tipo de cenário.**
 
 
 # Diretórios
