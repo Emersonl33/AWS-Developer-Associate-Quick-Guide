@@ -1388,6 +1388,79 @@ L3 (Patterns): Conjuntos de recursos pré-configurados para cenários específic
 <h1 />
 
 <p align= "center">
+  <img src="./Icons/Arch_AWS-Systems-Manager_64%405x.png" alt="SystemsManager-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Systems Manager
+    </h1>
+</p>
+
+O AWS Systems Manager é como um controle remoto para sua infraestrutura na AWS. Sabe quando você tem um monte de coisas para fazer e quer automatizar ou controlar tudo sem ter que ir em cada máquina ou servidor manualmente? É isso que o Systems Manager faz: ele ajuda a gerenciar e automatizar tudo de forma centralizada e prática. <br>
+Se você está gerenciando várias instâncias EC2 e precisa garantir que todas estejam com os patches de segurança mais recentes, você pode usar o Patch Manager para aplicar os patches automaticamente. 
+
+## Recursos
+- Automation: O recurso Automation permite a automação de tarefas de manutenção e operacionais de forma fácil e sem necessidade de scripts complexos. Ele ajuda a criar fluxos de trabalho automatizados para ações como implantação de patches, atualizações de segurança, restauração de backups, entre outros. É possível utilizar runbooks (livros de execução) pré-configurados ou criar fluxos de trabalho personalizados.
+- O Run Command permite executar comandos em instâncias EC2 e servidores on-premises, de forma remota e sem precisar acessar cada servidor manualmente
+- O Session Manager oferece uma maneira segura de acessar instâncias EC2 e servidores sem a necessidade de abrir portas SSH ou RDP. Ele cria sessões de terminal interativo, permitindo a administração remota de instâncias de forma segura e sem a necessidade de credenciais, apenas usando IAM (Identity and Access Management).
+- O Parameter Store oferece um local seguro para armazenar dados sensíveis como chaves de API, strings de conexão de banco de dados, e outros segredos. Ele permite que você armazene valores de parâmetros em texto simples ou criptografado e acesse-os de forma programática, integrando-os com outras ferramentas ou scripts.
+- O State Manager ajuda a garantir que suas instâncias EC2 ou servidores locais mantenham um estado desejado de configuração. Ele pode ser usado para aplicar configurações, como instalação de software ou configuração de parâmetros, e para monitorar se o sistema está conforme o esperado. Caso algo seja alterado, o State Manager pode corrigir automaticamente.
+- Patch Manager: Manter todos os servidores atualizados é muito importante, certo? O Patch Manager automatiza as atualizações de segurança em todas as suas máquinas, para garantir que nada fique vulnerável.
+- O Maintenance Windows ajuda a agendar e gerenciar as janelas de manutenção de sistemas e recursos, como patches ou atualizações, garantindo que essas atividades aconteçam em horários planejados e não impactem os usuários ou a operação crítica.
+- O Systems Manager Insights é um recurso mais novo que permite monitorar e diagnosticar instâncias EC2 em tempo real, coletando métricas e logs para detectar possíveis problemas ou oportunidades de melhoria.
+
+## SSM Parameter Store
+**Esse tópico merece uma atenção especial!!! O exame vai testar sua clareza da diferença entre esse recurso e outros que fazem administração de chaves**
+- Não tem rotação de chaves nativa
+- Útil para parâmetros simples (strings) e segredos (criptografados).
+- Parâmetros podem ser armazenados como **SecureString**, que são criptografados com AWS KMS (Key Management Service).
+- Útil para armazenamento de parâmetros de configuração não críticos.
+- Armazenamento de segredos sensíveis, mas sem a complexidade da rotação automática.
+- O custo é mais baixo quando comparado ao Secrets Manager para uso simples de armazenamento de segredos.
+
+| **Característica**                 | **SSM Parameter Store**                     | **AWS KMS**                          | **Secrets Manager**                       |
+|------------------------------------|---------------------------------------------|--------------------------------------|-------------------------------------------|
+| **Objetivo**                       | Armazenamento de parâmetros e segredos.     | Gerenciamento de chaves de criptografia. | Armazenamento e rotação de segredos.     |
+| **Tipo de dados**                  | Parâmetros simples e secretos.             | Chaves criptográficas.               | Segredos (ex: senhas, chaves de API).     |
+| **Criptografia**                   | Usando KMS para `SecureString`.             | Criptografia de chaves.              | Criptografia usando KMS.                 |
+| **Rotação automática**             | Não nativa (requere Lambda).                | Não se aplica (gera chaves, não segredos). | Suporte nativo para rotação automática.  |
+| **Versionamento**                  | Sim, suporta versionamento de parâmetros.   | Não se aplica.                       | Sim, suporta versionamento de segredos.  |
+| **Gerenciamento de chaves**        | Não gerencia chaves de criptografia.        | Gerencia apenas chaves de criptografia. | Não se aplica.                           |
+| **Casos de uso principais**        | Armazenamento de parâmetros e segredos simples. | Criptografar dados em outros serviços. | Gerenciar segredos sensíveis e rotação de credenciais. |
+| **Custo**                          | Mais barato para uso simples.              | Custos por operação de chave.        | Mais caro, mas oferece funcionalidade avançada. |
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/pt_br/systems-manager/latest/userguide/application-manager.html*
+<br />
+<br />
+
+<p align= "center">
+  <img src="./Icons/Arch_AWS-AppConfig_64%405x.png" alt="AppConfig-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+AppConfig 
+    </h1>
+</p>
+
+o AWS AppConfig facilita o gerenciamento centralizado e a implantação controlada de configurações em suas aplicações. É ideal para gerenciar configurações de aplicativos em ambientes de produção e desenvolvimento.<br>
+O AppConfig permite que você atualize configurações sem necessidade de implantar novamente o código ou reiniciar o aplicativo.<br>
+O seja, ele é tipo um controle remoto para suas configurações no app, permitindo mudar as coisas no backstage sem ninguém perceber e sem dar trabalho.
+
+## Como funciona
+- Criação de um "Application": Você define um "application" (aplicativo) no AppConfig. Isso pode ser um serviço ou sistema que usará as configurações.
+- Criação de "Environments" (Ambientes): Crie ambientes como "desenvolvimento", "teste" e "produção", para diferentes versões e configurações.
+- Definir "Configurations": Armazene configurações em um repositório, como o AWS Systems Manager Parameter Store ou o Amazon S3.
+- Implantar Configurações: Implante as configurações para o seu aplicativo, controlando o processo de implantação para minimizar riscos.
+- Monitoramento e Rollback: Acompanhe o desempenho da implantação e, se necessário, realize um rollback para uma configuração anterior.
+
+## Caso de uso
+- Imagina que você tem um app de música, tipo o Spotify, e quer oferecer uma promoção exclusiva para os usuários que ouvem bastante músicas de um gênero específico. Digamos que você quer oferecer um desconto para usuários que ouvem rock ou indie, mas só para um grupo pequeno de usuários por enquanto. Você quer ativar e desativar isso sem ficar mexendo no código do app toda hora. E sem precisar reimplantar o App.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/appconfig/*
+<br />
+<br />
+
+<p align= "center">
   <img src="./Icons/Arch_AWS-CloudFormation_64%405x.png" alt="CloudFormation-icon" style="height:180px; width:180px;"/>
 <br />
     <h2 align="center">
@@ -1521,6 +1594,45 @@ aws cloudwatch set-alarm-state --alarm-name "MyAlarm" --state-value "ALARM" --st
  - *https://docs.aws.amazon.com/cloudwatch/*
 <br />
 <br />
+
+<p align= "center">
+  <img src="./Icons/Arch_AWS-AppConfig_64%405x.png" alt="CloudTrail-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+CloudTrail
+    </h1>
+</p>
+
+CloudTrail é um serviço da AWS que permite registrar, monitorar e auditar todas as ações realizadas em sua conta da AWS. Em outras palavras, ele mantém um "registro" de todas as atividades feitas pelos usuários, aplicações ou serviços dentro da AWS, como criação, modificação ou exclusão de recursos. <br>
+
+Cada vez que alguém realiza uma ação, como lançar uma instância EC2, criar um bucket no S3 ou modificar uma política IAM, o CloudTrail cria um log dessa ação, armazenando informações detalhadas como <br>
+- Quem fez a ação (usuário ou serviço).
+- O que foi feito (ação realizada, como "CreateInstance", "PutObject", etc.).
+- Quando foi feito (data e hora da ação).
+- Onde foi feito (região da AWS onde a ação ocorreu).
+- Detalhes adicionais (ex: parâmetros usados na ação).
+
+## Quando usar?
+- Esse serviço pode ser facilmente confundido com alguns casos de uso do cloudWatch e o exame vai testar se você tem clareza sobre essas diferenças em quase todas perguntas sobre logs e auditoria.
+- CloudTrail é auditório, rastreando quem fez o quê, quando e onde em sua conta AWS.
+- CloudWatch é útil para monitoramento de desempenho, rastreando como os recursos estão se comportando em tempo real (uso de CPU, memória, latência, etc.).
+
+| **Característica**               | **AWS CloudTrail**                         | **AWS CloudWatch**                          |
+|-----------------------------------|--------------------------------------------|--------------------------------------------|
+| **Objetivo Principal**            | Auditoria e Registro de Ações              | Monitoramento de Desempenho e Logs         |
+| **Tipo de Dados**                 | Registros de chamadas de API (eventos)     | Métricas de desempenho e logs em tempo real |
+| **O que é monitorado**            | Ações feitas por usuários e serviços (ex: criação de recursos, modificações) | Desempenho e métricas de recursos e logs de aplicações |
+| **Exemplo de Uso**                | Investigar quem apagou um bucket S3        | Monitorar o uso de CPU de uma instância EC2 |
+| **Tipo de Alertas**               | Não é voltado para alertas de desempenho; foco em auditoria de ações | Alertas de desempenho (ex: CPU, memória) e falhas de sistema |
+| **Monitoramento em Tempo Real**   | Não monitoramento em tempo real. Foco em **auditoria posterior** | Monitoramento em tempo real de métricas e logs |
+| **Armazenamento**                 | Logs armazenados em S3 ou CloudTrail       | Logs e métricas armazenados no CloudWatch Logs e Metrics |
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/cloudtrail/*
+<br />
+<br />
+
+
 
 <h1 align= "center"> 
  📊Analytics🔍
