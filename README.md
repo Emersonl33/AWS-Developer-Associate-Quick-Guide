@@ -602,10 +602,16 @@ SAM
     </h1>
 </p>
 
-O SAM é o nosso caçula aqui. Foi lançado em novembro de 2022 e é extremamente prático pro dia-a-dia. O AWS SAM é como uma ferramenta que ajuda você a montar uma aplicação serverless de forma rápida e fácil. Ele reduz o trabalho manual, organiza sua infraestrutura e facilita testes locais.
+O SAM é o nosso caçula aqui. Foi lançado em novembro de 2022 e é extremamente prático pro dia-a-dia. O AWS SAM (Serverless Application Model) é uma estrutura para construir, testar e implantar aplicações serverless na AWS. Ele funciona como uma extensão do AWS CloudFormation.
+
+## Como ele funciona
+  1. Você cria um arquivo template.yaml onde descreve sua aplicação serverless (Também é possível usar alguns modelos prontos)
+  2. Teste localmente (com sam local invoke)
+  3. Empacote e implante na AWS (com os comandos sam build e sam deploy).
+  4. Transformação para CloudFormation: O SAM transforma o template simplificado em um template completo do AWS CloudFormation.
+  5. Após implantada, sua aplicação é gerenciada como pilhas de CloudFormation, o que facilita a manutenção, atualização e exclusão.
 
 ## Quando usar o AWS SAM?
-
 - Use o AWS SAM sempre que estiver construindo uma aplicação serverless, especialmente se ela envolver:
 - Funções Lambda.
 - APIs gerenciadas pelo API Gateway.
