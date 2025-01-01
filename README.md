@@ -2025,7 +2025,7 @@ Pensa nele como um porteiro digital: ele recebe as requisições dos usuários, 
 <br />
 
 <p align= "center">
-  <img src=".Icons/Arch_Amazon-CloudFront_64%405x.png" alt="Cloud-Front-icon" style="height:180px; width:180px;"/>
+  <img src="./Icons/Arch_Amazon-CloudFront_64%405x.png" alt="Cloud-Front-icon" style="height:180px; width:180px;"/>
 <br />
     <h1 align="center">
 Cloud Front
@@ -2053,7 +2053,7 @@ O CloudFront tem uma rede de pontos de presença espalhados por várias regiões
 <br />
 
 <p align= "center">
-  <img src=".Icons/Arch_Amazon-CloudFront_64%405x.png" alt="Cloud-Front-icon" style="height:180px; width:180px;"/>
+  <img src="./Icons/Arch_Elastic-Load-Balancing_64%405x.png" alt="Cloud-Front-icon" style="height:180px; width:180px;"/>
 <br />
     <h1 align="center">
 Elastic Load Balancer
