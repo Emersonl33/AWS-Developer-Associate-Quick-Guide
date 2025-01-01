@@ -1980,6 +1980,202 @@ Por exemplo, se você tem uma aplicação que precisa de dados de um banco de da
 <br />
 <br />
 
+<h1 align= "center"> 
+ 📲Networking and ContentDelivery🌐
+<h1 />
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-API-Gateway_64%405x.png" alt="API-Gateway-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+API Gateway
+    </h1>
+</p>
+
+Esse é um dos tópicos mais importantes para a prova que com certeza cobrará a maioria dos conceitos aqui.<br>
+O API Gateway facilita a criação, o gerenciamento e a exposição de APIs para suas aplicações. Em outras palavras, ele serve como uma porta de entrada para suas APIs, permitindo que você controle o acesso e a forma como os dados circulam entre seus usuários/clientes e os backends (serviços, bancos de dados, microservices, etc.).<br>
+Pensa nele como um porteiro digital: ele recebe as requisições dos usuários, valida, faz roteamento, aplica regras de segurança e, finalmente, repassa para o serviço correto fazer o trabalho. Ele também pode fazer coisas como limitar o tráfego, monitorar o uso e tratar falhas. 
+
+## APIs suportadas
+- REST APIs:  As REST APIs (Representational State Transfer) são o tipo mais comum de API na web. Elas seguem o padrão de arquitetura REST, onde as requisições HTTP (GET, POST, PUT, DELETE, etc.) são usadas para interagir com recursos em um servidor. Ideal para serviços web tradicionais. Pode ser integrada a backends, como AWS Lambda, EC2, S3, ou até mesmo outros serviços externos. 
+- WebSocket APIs: As WebSocket APIs são usadas para criar conexões bidirecionais entre o cliente e o servidor. Isso permite que o servidor envie dados ao cliente em tempo real sem que o cliente precise fazer uma requisição constantemente. Ideal para aplicações que exigem comunicação em tempo real, como chats, jogos online, ou notificações push.
+
+## Principais componentes:
+- Stages: O stage é usado para organizar e separar suas apis, vc pode criar múltiplos ambientes, como dev, test e prod.
+- Método: Cada método é uma ação HTTP (como GET, POST, PUT, DELETE) que pode ser aplicada a um recurso. Por exemplo, em /users, você pode ter o método GET para obter a lista de usuários e POST para criar um novo usuário.
+- Deployment: O deployment é o processo de publicar a versão da API em um stage. Quando você faz mudanças na API, precisa criar um novo deployment para tornar essas mudanças ativas.
+
+## Variáveis de estágio
+- As variáveis de estágio são valores associados a um estágio específico da sua API (como dev, staging, prod). Elas são usadas para armazenar informações que podem ser alteradas de acordo com o ambiente, como URLs de serviços, credenciais, parâmetros de configuração, entre outros. Essas variáveis permitem que você configure sua API de forma flexível, sem necessidade de mudanças no código.
+- Você pode usar variáveis para alterar o endereço do backend entre ambientes. Por exemplo, em um estágio dev, você pode usar o URL de um banco de dados de desenvolvimento, enquanto em produção usa o de um banco de dados real.
+- Você pode configurar diferentes chaves de API ou tokens de autenticação para diferentes estágios.
+
+## Autorizadores
+- Autorizador Cognito (Cognito Authorizer): O Cognito Authorizer usa o serviço Amazon Cognito para autenticar usuários. O Cognito fornece uma maneira fácil de gerenciar usuários e suas credenciais (como tokens JWT, OAuth2 ou SAML).
+- Autorizador Lambda: Quando uma requisição é recebida, o API Gateway chama a função Lambda definida para o autorizador, passando os detalhes da requisição, como headers, parâmetros de query ou corpo. A função Lambda pode então processar esses dados, realizar a autenticação (como verificar um token JWT, API Key ou até mesmo consultar um banco de dados) e retornar uma resposta dizendo se a requisição é autorizada ou não.
+- Se a requisição não for autorizada, o API Gateway retorna um erro, como 401 Unauthorized.
+
+## Integração com o Lambda
+- Quando um cliente faz uma requisição para a API, o API Gateway pode ser configurado para enviar essa requisição diretamente para uma função Lambda. A função Lambda processa a requisição, executa a lógica desejada (por exemplo, buscar dados em um banco de dados, realizar cálculos, etc.) e retorna uma resposta ao API Gateway, que por sua vez retorna a resposta para o cliente.
+- O API Gateway precisa de permissões para invocar a função Lambda. Para isso, você deve criar uma role IAM que permite ao API Gateway invocar a função Lambda e associá-la ao API Gateway. Isso é feito automaticamente se você usar o console do API Gateway para configurar a integração.
+- Depois de configurar, você pode testar a API diretamente no console do API Gateway. Ele enviará a requisição para a função Lambda e mostrará a resposta.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/apigateway/*
+<br />
+<br />
+
+<p align= "center">
+  <img src=".Icons/Arch_Amazon-CloudFront_64%405x.png" alt="Cloud-Front-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Cloud Front
+    </h1>
+</p>
+
+O Cloud Front é um serviço de entrega de conteúdo pela rede, como sites estáticos e dinâmicos, vídeos, APIs, entre outros, de forma rápida e segura para usuários ao redor do mundo. O objetivo do CloudFront é melhorar a performance, reduzir a latência e fornecer uma experiência de usuário mais rápida, independentemente de onde o usuário esteja.<br>
+O CloudFront tem uma rede de pontos de presença espalhados por várias regiões ao redor do mundo, conhecidos como Edge Locations. Esses pontos são servidores que armazenam em cache o conteúdo estático da sua aplicação (como imagens, vídeos, páginas HTML, etc.).
+
+## Como funciona
+- Quando um usuário faz uma requisição para o seu site ou aplicação, o CloudFront tenta entregar o conteúdo a partir do ponto de presença mais próximo da sua localização, reduzindo a distância que os dados precisam percorrer e, consequentemente, melhorando a velocidade de carregamento.
+- Cache Dinâmico: Para conteúdos dinâmicos que não podem ser armazenados em cache (como resultados de consultas em tempo real), o CloudFront pode ser configurado para encaminhar as requisições diretamente para o origem do conteúdo, como um servidor de origem ou um bucket S3, sem perder a agilidade da rede de entrega.
+
+## Caso de uso
+- Imagine que você tem conteúdo estático de um site de e-commerce com imagens, arquivos CSS e HTML que são acessados por usuários de várias partes do mundo. Ao usar o CloudFront: Você configura uma distribuição, apontando para o S3 bucket que armazena esses dados.Se o tráfego crescer rapidamente durante uma promoção, o CloudFront pode lidar com o aumento de demanda sem que você precise alterar a infraestrutura.
+
+## Geo Restriction
+- Você pode configurar o CloudFront para permitir o acesso ao conteúdo apenas de determinados países ou regiões. Isso pode ser útil, por exemplo, se você deseja restringir o acesso a um site apenas a usuários de um país específico ou a um grupo de países.
+- O CloudFront usa o endereço IP do usuário para determinar a localização geográfica. Isso pode não ser 100% preciso, já que usuários podem usar VPNs ou proxies para mascarar sua localização real.
+- O serviço de geo-restrição não oferece granularidade por região dentro de um país (por exemplo, não é possível bloquear um estado específico dentro de um país).
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/cloudfront/*
+<br />
+<br />
+
+<p align= "center">
+  <img src=".Icons/Arch_Amazon-CloudFront_64%405x.png" alt="Cloud-Front-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Elastic Load Balancer
+    </h1>
+</p>
+
+O Elastic Load Balancer (ELB) é um serviço que distribui automaticamente o tráfego de entrada entre várias instâncias de Amazon EC2 (ou outros recursos como containers e funções Lambda) para garantir alta disponibilidade para as aplicações. O objetivo principal do ELB é balancear a carga de tráfego entre vários servidores ou recursos, garantindo que nenhum servidor fique sobrecarregado, e que o tráfego seja distribuído de maneira eficiente.<br>
+O ELB pode se ajustar automaticamente ao aumento ou diminuição do tráfego, redirecionando as requisições para instâncias EC2 disponíveis. Ele funciona bem com Auto Scaling Groups, permitindo que o número de instâncias EC2 aumente ou diminua conforme a demanda de tráfego.
+
+## Tipos de ELB
+- Application Load Balancer (ALB): Ideal para aplicações HTTP/HTTPS: O ALB é o tipo de ELB recomendado para balancear tráfego HTTP e HTTPS. Ele trabalha no nível da camada 7 (Aplicação) do modelo OSI, o que significa que ele pode fazer roteamento baseado em URLs, cabeçalhos HTTP, cookies, etc.
+- Network Load Balancer (NLB): Ideal para aplicações de alto desempenho e baixa latência: O NLB opera na camada 4 (Transporte) e é projetado para altos volumes de tráfego com baixa latência. Ele é adequado para aplicações que exigem transporte TCP/UDP e alta performance.
+
+## Segurança 
+- O ELB oferece suporte a criptografia de ponta a ponta, usando SSL/TLS para proteger os dados em trânsito entre os clientes e os servidores. Você pode configurar certificados SSL no ELB para garantir a comunicação segura.
+- Também pode ser integrado com AWS WAF para proteger suas aplicações contra ameaças da web.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/elasticloadbalancing/?icmpid=docs_homepage_networking*
+<br />
+<br />
+
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-Route-53_64%405x.png" alt="Route-53-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Route 53
+    </h1>
+</p>
+
+O Amazon Route 53 é um serviço de DNS (Domain Name System). Ele permite que você gerencie os nomes de domínio e as configurações de DNS. Quando um usuário digita um endereço de site no navegador, o Route 53 resolve esse nome de domínio em um endereço IP. Isso é feito por meio de uma consulta DNS, onde o serviço localiza os servidores responsáveis por esse domínio e direciona o tráfego corretamente. Você pode registrar e gerenciar domínios diretamente no Route 53, sem precisar de um provedor externo. Isso inclui a compra de novos domínios, a configuração de registros DNS para esses domínios e a renovação do registro.
+
+## Tipos de roteamento de tráfego
+- Roteamento simples: Mapeamento direto de domínios para endereços IP ou instâncias de recursos.
+- Roteamento baseado em latência: Direciona os usuários para o recurso mais próximo de sua localização, melhorando a performance.
+- Roteamento geográfico: Direciona os usuários com base na sua localização geográfica.
+- Roteamento ponderado: Permite distribuir o tráfego entre diferentes recursos de acordo com uma porcentagem especificada.
+- Failover: Redireciona automaticamente o tráfego para um recurso alternativo se o recurso principal falhar.
+
+## Health checks
+- O Route 53 pode ser configurado para monitorar a saúde dos recursos (como servidores web, instâncias EC2, etc.). Caso um recurso falhe, ele pode redirecionar o tráfego automaticamente para outro recurso saudável, garantindo alta disponibilidade.
+
+## CNAME
+- Um CNAME é um registro de DNS que mapeia um nome de domínio para outro nome de domínio. Quando alguém acessa o domínio apontado pelo CNAME, a consulta DNS será resolvida para o endereço do domínio alvo.
+- Exemplo: www.exemplo.com → meusite.exemplo.com
+- Quando alguém acessar www.exemplo.com, o DNS vai resolver para meusite.exemplo.com.
+- só pode ser usado em Subdomínios (não pode ser usado no domínio raiz).
+
+## Alias 
+- Um Alias é um tipo especial de registro DNS que é exclusivo do Amazon Route 53. Ele mapeia um nome de domínio para um recurso da AWS, como um balanço de carga (ELB), CloudFront, S3 bucket, ou outros recursos da AWS, sem precisar de um endereço IP explícito.
+- Com um Alias, você pode apontar diretamente para serviços como Elastic Load Balancer (ELB), Amazon CloudFront, S3, e Route 53 com um domínio raiz ou subdomínio. Isso não é possível com CNAME.
+- Pode ser usado para subdomínios e domínio raiz
+- Exemplo: exemplo.com → meusite.s3-website-us-east-1.amazonaws.com
+- Aqui, você pode apontar diretamente para o S3 bucket de hospedagem de site estático, sem precisar de um endereço IP ou nome de domínio intermediário.
+
+## TTL (Time-To-Live)
+- TTL (Time to Live) é um parâmetro associado a registros DNS que especifica por quanto tempo, em segundos, um registro pode ser armazenado em cache por servidores DNS e resolvers antes de ser considerado "expirado"
+- Um TTL menor significa que os registros expirarão mais rapidamente e, portanto, serão consultados com mais frequência. Um TTL maior significa que os registros permanecerão em cache por mais tempo, reduzindo o número de consultas ao servidor DNS.
+- TTL Baixo: Pode levar a mais consultas ao servidor DNS, o que pode aumentar a latência e os custos de consulta.
+- TTL Alto: Pode reduzir o número de consultas e melhorar o desempenho, mas pode causar atraso na propagação de alterações, pois as mudanças nos registros só serão refletidas após a expiração do TTL.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/route53/*
+<br />
+<br />
+
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-Virtual-Private-Cloud_64%405x.png" alt="VPC-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+VPC
+    </h1>
+</p>
+
+VPC (Virtual Private Cloud) é um dos pilares fundamentais de uma cloud pública, e o serviço de redes da AWS. Ele oferece um ambiente seguro e isolado para executar suas instâncias de Amazon EC2, bancos de dados, containers e outros recursos. É essencial para quem precisa de controle total sobre o tráfego de rede e a arquitetura de rede na nuvem. As VPCs são regionais e gratuitas. 
+
+## Sub-redes (Subnets)
+- Você pode dividir sua VPC em várias sub-redes (subnets), que são segmentos menores da rede. Cada sub-rede pode ser configurada para ser pública (acessível da internet) ou privada (isolada da internet).
+
+## VPN e Conectividade Híbrida
+- É possível conectar sua VPC a uma rede local (on-premises) via VPN (Virtual Private Network) ou através de uma AWS Direct Connect para estabelecer uma conexão privada de alta performance entre sua infraestrutura local e a nuvem da AWS.
+
+## Peering de VPC
+- Você pode peering (fazer a conexão) entre duas ou mais VPCs para permitir que elas se comuniquem de maneira segura sem conexão pela internet públca. Isso é útil, por exemplo, para compartilhar recursos entre ambientes de diferentes contas da AWS.
+- VPC Peering não é transitivo: Ou seja, se você tem a VPC A conectada à VPC B, e a VPC B conectada à VPC C, isso não significa que a VPC A pode se comunicar com a VPC C automaticamente. Se quiser que a VPC A se comunique com a VPC C, você precisa configurar o peering entre essas duas VPCs também. Para conexões transitivas, use o Transit Gateway.
+
+## Internet Gateway (IGW)
+- Permite que recursos dentro da VPC se comuniquem com a internet.
+
+## NAT Gateway/Instance
+- Permite que instâncias em sub-redes privadas acessem a internet sem expô-las diretamente à internet. Útil para bancos de dados em sub-redes privadas que precisam acessar a internet para baixar patches e atualizações.
+
+## VPC Endpoint:
+-  Permite que instâncias privadas se comuniquem com serviços da AWS, como S3 ou DynamoDB, sem precisar sair da VPC e sem acessar a internet.
+
+| Tipo de Endpoint       | Serviços Suportados                | Descrição                                                     |
+|------------------------|------------------------------------|---------------------------------------------------------------|
+| **Interface Endpoint**  | Qualquer serviço que suporta AWS PrivateLink (ex: S3, DynamoDB, EC2) | Conecta a serviços da AWS ou terceiros através de ENIs privadas. |
+| **Gateway Endpoint**    | Amazon S3 e DynamoDB               | Conecta a serviços específicos (S3 e DynamoDB) através de tabelas de roteamento sem sair da rede privada. |
+
+
+## Transit Gateway
+- Um ponto central de conexão entre VPCs e conexões on-premise (VPN ou Direct Connect). O Transit Gateway oferece controle centralizado de roteamento. Você pode definir rotas que determinam como o tráfego será direcionado entre as VPCs, redes locais e outras conexões de rede, sem a necessidade de configurar manualmente tabelas de roteamento complexas.
+
+## Security Groups e ACLs
+
+| Característica               | **Network ACLs**                             | **Security Groups**                           |
+|------------------------------|----------------------------------------------|-----------------------------------------------|
+| **Nível de Aplicação**       | Sub-rede (afetando toda a sub-rede)          | Instância (afeta instâncias específicas)      |
+| **Tipo de Regras**           | Permite regras de **permitir** e **negar**    | Apenas regras de **permitir**                 |
+| **Estado**                   | **Sem estado** (precisa definir regras de entrada e saída separadamente) | **Com estado** (uma regra de entrada permite também a saída correspondente) |
+| **Aplicação de Regras**      | Processamento de regras **sequencial**       | Regras são avaliadas **simultaneamente**      |
+| **Direção do Tráfego**       | Aplica-se tanto a **entrada** quanto a **saída** | Controla o tráfego **de entrada** (e saída por padrão) |
+| **Uso Comum**                | Controle de tráfego entre **sub-redes**      | Controle de tráfego em **instâncias específicas** |
+| **Padrão**                   | **Permitir** todo o tráfego por padrão       | **Negar** todo o tráfego de entrada por padrão |
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/vpc/*
+<br />
+<br />
+
+
 
 ## Como Usar Este Repositório 🧑‍💻
 
