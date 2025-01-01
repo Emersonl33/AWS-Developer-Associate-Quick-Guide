@@ -685,88 +685,7 @@ Você tem uma aplicação web, tipo um site ou uma API, e quer rodá-la na nuvem
 <br />
 <h1 align= "center"> 
  🎲Bancos de Dados🎲
-<br>
-<p align= "center">
-  <img src="./Icons/Arch_Amazon-RDS_64%405x.png" alt="RDS-icon" style="height:180px; width:180px;"/>
-<br />
-    <h1 align="center">
-RDS
-    </h1>
-</p>
-
-O Amazon RDS (Relational Database Service) é um serviço gerenciado da AWS que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem. Ele elimina tarefas operacionais como instalação de software, provisionamento de hardware, backups, patching e recuperação de falhas. O RDS não é serverless, o que significa que você precisará provisionar instâncias.
-
-## Suporte
-- MySQL
-- PostgreSQL
-- MariaDB
-- Oracle Database
-- Microsoft SQL Server
-- Amazon Aurora (otimizado pela AWS)
-
-## RDS Custom for Oracle
-- Dá a você acesso ao sistema operacional subjacente (host EC2), permitindo instalar extensões, ferramentas ou fazer configurações específicas.
-- Suporta customizações, como patches ou configurações especiais do Oracle Database, que não seriam possíveis no RDS padrão.
-- Usado, por exemplo, se você precisada de algumas funcionalidades do Oracle Enterprise Edition que necessita de permissões avançadas. Ou se você tem software legado que exige versões específicas ou configurações especiais do Oracle.
-
-## Gerenciamento
-- Backups automáticos e snapshots manuais.
-- Atualizações automáticas de software.
-- Escalabilidade vertical (mudar o tipo de instância) e horizontal (réplicas de leitura).
-
-## Alta Disponibilidade
-- Suporte a Multi-AZ
-- Suporta também multi region mas isso gera um custo adicional elevado
-
-## Read Replicas (Atenção pra esse ponto =))
-- Read replicas são cópias assíncronas somente leitura do seu banco de dados usadas para mitigar problemas de performance em cenários onde existe uma carga muito grande de leituras no seu banco de dados principal.
-
-## Distaser recovery
-- Backups: O RDS faz backups automáticos do banco diariamente.E permite que você restaure o banco para um ponto no tempo específico, dentro do período de retenção configurado de até 35 dias.
-- Snapshots Manuais: Você pode criar snapshots manuais a qualquer momento. Diferente dos backups automáticos, esses snapshots não expiram e podem ser usados para restaurar o banco quando necessário.
-- Multi-AZ Deployment: O banco de dados principal é replicado automaticamente em outra zona de disponibilidade. Se a zona principal falhar, o RDS faz o failover automático para a réplica secundária.
-- Read Replicas em Regiões Diferentes: Embora read replicas sejam para leitura, você pode promovê-las a banco de dados principal em caso de falha
-
-## RDS Proxy
-- Em situações de alto tráfego, sua aplicação pode abrir muitas conexões ao banco, sobrecarregando-o. O RDS Proxy gerencia um pool de conexões e as reutiliza, reduzindo a carga no banco de dados.
-- Integra-se ao AWS Secrets Manager para gerenciar credenciais do banco de dados. Isso elimina a necessidade de armazenar senhas em sua aplicação.
-- Funciona muito bem com funções Lambda que precisam se conectar a bancos de dados. Mas atenção!!! Se seu bancon estiver dentro de um sub net privada. Para sua função lambda ter acesso ao seu banco, ela precisará estar dentro da mesma VPC.
-
-## :books: Referências
- - *https://docs.aws.amazon.com/rds/*
-<br />
-<br />
-<h1 />
-<p align= "center">
-  <img src="./Icons/Arch_Amazon-ElastiCache_64%405x.png" alt="ElastiCache-icon" style="height:180px; width:180px;"/>
-<br />
-    <h1 align="center">
-ElastiCache
-    </h1>
-</p>
-
- O ElastiCache é um serviço gerenciado de cache na nuvem, que melhora o desempenho de aplicativos, reduzindo a carga nos bancos de dados e acelerando o tempo de resposta. Ele oferece duas opções principais: Redis e Memcached, para armazenar dados frequentemente acessados em memória, como sessões de usuário, resultados de consultas e filas de mensagens.
-
-| **Característica**        | **Redis**                                   | **Memcached**                              |
-|----------------------------|---------------------------------------------|--------------------------------------------|
-| **Persistência de dados**  | Sim (opcional, em disco)                   | Não                                        |
-| **Suporte a estruturas de dados** | Sim (listas, conjuntos, hashes, etc.) | Apenas pares chave-valor                   |
-| **Clusterização**          | Sim (suporte nativo a sharding)            | Suporte básico                             |
-| **Alta disponibilidade**   | Sim (replicação e failover automático)     | Não                                        |
-| **Complexidade**           | Mais recursos, mas mais complexo de gerenciar | Mais simples e leve                       |
-
-## TTL
-- TTL podem ter um range de segundos, horas ou dias.
-- É crucial saber configurar o TTL para o caso de uso adequado. Se vc colocar um TTL muito curto, isso pode ocasionar em uma sobracarga no banco, por outro lado, um ttl longo pode causar um cache muito grande e custoso.
-
-## Casos de uso
-- Em uma plataforma de e-commerce, ElastiCache pode ser usado para armazenar informações sobre os produtos mais vendidos. Sempre que um usuário acessar a página de um produto popular, o sistema verificará primeiro o cache (ElastiCache) para evitar uma consulta ao banco de dados, o que acelera o carregamento da página e reduz o custo de acesso ao banco.
-
-## :books: Referências
- - *https://docs.aws.amazon.com/elasticache/*
-<br />
-<br />
-
+  
 <p align= "center">
   <img src="./Icons/Arch_Amazon-DocumentDB_64%405x.png" alt="DynamoDB-icon" style="height:180px; width:180px;"/>
 <br />
@@ -859,6 +778,120 @@ Se você tem uma tabela de usuários, a chave de partição poderia ser o ID do 
  - *https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html*
 <br />
 <br />
+
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-RDS_64%405x.png" alt="RDS-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+RDS
+    </h1>
+</p>
+
+O Amazon RDS (Relational Database Service) é um serviço gerenciado da AWS que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem. Ele elimina tarefas operacionais como instalação de software, provisionamento de hardware, backups, patching e recuperação de falhas. O RDS não é serverless, o que significa que você precisará provisionar instâncias.
+
+## Suporte
+- MySQL
+- PostgreSQL
+- MariaDB
+- Oracle Database
+- Microsoft SQL Server
+- Amazon Aurora (otimizado pela AWS)
+
+## RDS Custom for Oracle
+- Dá a você acesso ao sistema operacional subjacente (host EC2), permitindo instalar extensões, ferramentas ou fazer configurações específicas.
+- Suporta customizações, como patches ou configurações especiais do Oracle Database, que não seriam possíveis no RDS padrão.
+- Usado, por exemplo, se você precisada de algumas funcionalidades do Oracle Enterprise Edition que necessita de permissões avançadas. Ou se você tem software legado que exige versões específicas ou configurações especiais do Oracle.
+
+## Gerenciamento
+- Backups automáticos e snapshots manuais.
+- Atualizações automáticas de software.
+- Escalabilidade vertical (mudar o tipo de instância) e horizontal (réplicas de leitura).
+
+## Alta Disponibilidade
+- Suporte a Multi-AZ
+- Suporta também multi region mas isso gera um custo adicional elevado
+
+## Read Replicas (Atenção pra esse ponto =))
+- Read replicas são cópias assíncronas somente leitura do seu banco de dados usadas para mitigar problemas de performance em cenários onde existe uma carga muito grande de leituras no seu banco de dados principal.
+
+## Distaser recovery
+- Backups: O RDS faz backups automáticos do banco diariamente.E permite que você restaure o banco para um ponto no tempo específico, dentro do período de retenção configurado de até 35 dias.
+- Snapshots Manuais: Você pode criar snapshots manuais a qualquer momento. Diferente dos backups automáticos, esses snapshots não expiram e podem ser usados para restaurar o banco quando necessário.
+- Multi-AZ Deployment: O banco de dados principal é replicado automaticamente em outra zona de disponibilidade. Se a zona principal falhar, o RDS faz o failover automático para a réplica secundária.
+- Read Replicas em Regiões Diferentes: Embora read replicas sejam para leitura, você pode promovê-las a banco de dados principal em caso de falha
+
+## RDS Proxy
+- Em situações de alto tráfego, sua aplicação pode abrir muitas conexões ao banco, sobrecarregando-o. O RDS Proxy gerencia um pool de conexões e as reutiliza, reduzindo a carga no banco de dados.
+- Integra-se ao AWS Secrets Manager para gerenciar credenciais do banco de dados. Isso elimina a necessidade de armazenar senhas em sua aplicação.
+- Funciona muito bem com funções Lambda que precisam se conectar a bancos de dados. Mas atenção!!! Se seu bancon estiver dentro de um sub net privada. Para sua função lambda ter acesso ao seu banco, ela precisará estar dentro da mesma VPC.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/rds/*
+<br />
+<br />
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-Aurora_64%405x.png" alt="Aurora-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+Aurora 
+    </h1>
+</p>
+
+O Aurora é parte do serviço Amazon RDS e foi projetado para ser altamente escalável, rápido e resiliente. Ele é compatível com MySQL e Postgres. E pode ser até 5X mais rápido que o RDS MySQL e até 3X mais rápido que o RDS Postgres.<br>
+O Aurora não é nativamente serverless mas ele oferece uma variante chamada Aurora Serverless
+
+## Características
+- Pode escalar de 10GB até 128 TB
+- Pode ter até 15 read replicas
+- FailOver instantâneo e automático
+- Os dados são replicados automaticamente em seis cópias em três zonas de disponibilidade (AZs)
+- Custa até 20% mais que o RDS.
+
+## Aurora Serverless
+- Não há necessidade de provisionar instâncias ou gerenciar a capacidade.
+- Escala automaticamente para cima ou para baixo, dependendo da demanda (em unidades chamadas ACUs, Aurora Capacity Units).
+- Ideal para cargas de trabalho com tráfego imprevisível ou intermitente.
+- Você paga apenas pela capacidade consumida enquanto o banco está ativo.
+
+## Quando usar cada um?
+- Aurora Tradicional: Para cargas de trabalho previsíveis e de alta demanda, onde você precisa de controle sobre o desempenho. Um sistema ERP que precisa de performance consistente. 
+- Aurora Serverless:  Para cargas de trabalho imprevisíveis, como um site que recebe tráfego esporádico ou um sistema de desenvolvimento/teste. Ou um e-commerce que tem picos de tráfego durante eventos promocionais.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/aurora/*
+<br />
+<br />
+<h1 />
+<p align= "center">
+  <img src="./Icons/Arch_Amazon-ElastiCache_64%405x.png" alt="ElastiCache-icon" style="height:180px; width:180px;"/>
+<br />
+    <h1 align="center">
+ElastiCache
+    </h1>
+</p>
+
+ O ElastiCache é um serviço gerenciado de cache na nuvem, que melhora o desempenho de aplicativos, reduzindo a carga nos bancos de dados e acelerando o tempo de resposta. Ele oferece duas opções principais: Redis e Memcached, para armazenar dados frequentemente acessados em memória, como sessões de usuário, resultados de consultas e filas de mensagens.
+
+| **Característica**        | **Redis**                                   | **Memcached**                              |
+|----------------------------|---------------------------------------------|--------------------------------------------|
+| **Persistência de dados**  | Sim (opcional, em disco)                   | Não                                        |
+| **Suporte a estruturas de dados** | Sim (listas, conjuntos, hashes, etc.) | Apenas pares chave-valor                   |
+| **Clusterização**          | Sim (suporte nativo a sharding)            | Suporte básico                             |
+| **Alta disponibilidade**   | Sim (replicação e failover automático)     | Não                                        |
+| **Complexidade**           | Mais recursos, mas mais complexo de gerenciar | Mais simples e leve                       |
+
+## TTL
+- TTL podem ter um range de segundos, horas ou dias.
+- É crucial saber configurar o TTL para o caso de uso adequado. Se vc colocar um TTL muito curto, isso pode ocasionar em uma sobracarga no banco, por outro lado, um ttl longo pode causar um cache muito grande e custoso.
+
+## Casos de uso
+- Em uma plataforma de e-commerce, ElastiCache pode ser usado para armazenar informações sobre os produtos mais vendidos. Sempre que um usuário acessar a página de um produto popular, o sistema verificará primeiro o cache (ElastiCache) para evitar uma consulta ao banco de dados, o que acelera o carregamento da página e reduz o custo de acesso ao banco.
+
+## :books: Referências
+ - *https://docs.aws.amazon.com/elasticache/*
+<br />
+<br />
+
 
 <h1 align= "center"> 
  ☁️Developer Tools🔧 
