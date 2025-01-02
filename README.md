@@ -28,22 +28,8 @@ Isso pode ser adquirido por meio de cursos, labs práticos disponíveis no skill
 Para mais detalhes: https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf
 
 # Conteúdo do Exame 📚🌐
-Nessa secão vou organizar o conteúdo do exame de acordo com o tipo do serviço.
-
-Alguns grupos de serviços são considerados essenciais para compreensão do funcionamento básico de uma topologia cloud, é boa ideia comećar por aqui:
-- Identidade e Segurança
-- Computação
-- Armazenamento
-- Redes
-- Bancos de dados
-- Observabilidade e Auditoria
-
-O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui que está a carga de complexidade desse exame, A AWS vai fazer muitas perguntas relacionadas ao funcionamento detalhado desses serviços e como resolver problemas utilizando eles:
-- Deploy
-- Development Tools
-- App integration
-- Data Ingestion and Analytics
-- Containers
+Nessa secão vou organizar o conteúdo do exame de acordo com o tipo do serviço determinado pela própria AWS no manual do candidato. <br>
+**O repositório está organizado por tópicos e serviços relevantes para a certificação, todo conteúdo está contido nesse README e também pode ser acessado por serviço específico pelos arquivos .md** <br>
   
 ### 🔑 ****Security, Identity, and Compliance****
 - [**IAM**](IAM.md) 💳  
@@ -110,8 +96,6 @@ O foco princiapl fica por conta das ferramentas de desenvolvimento, e é aqui qu
 - [Elastic Load Balancer (ELB)](ELB.md) ⚖️
 - [Route 53](Route53.md) 🌍
 - [VPC](VPC.md) 🖧
-  
-<br/ >
 
 <h1 align= "center"> 
 🔒Security, Identity, and Compliance👤
@@ -739,6 +723,15 @@ O Amazon Elastic Container Service (ECS) é um serviço que facilita a execuçã
 - Melhores Práticas Integradas: O Copilot aplica automaticamente as melhores práticas para segurança, escalabilidade e monitoramento.
 - Integração CI/CD: Facilita fluxos de trabalho de implantação contínua com opções de CI/CD integradas
 - Usa arquivos YAML para definir configurações de serviço, tornando fácil personalizar implantações.
+
+## Fargate
+- O AWS Fargate é um serviço de computação sem servidor para containers, oferecido pela Amazon Web Services (AWS). Ele permite que você execute containers sem precisar gerenciar a infraestrutura subjacente, como servidores ou clusters de máquinas virtuais. Com o Fargate, você apenas define as configurações do seu container, como CPU e memória, e o serviço cuida do provisionamento, escalabilidade e gerenciamento da infraestrutura necessária para rodar os containers.
+- Você paga apenas pelos recursos usados pelos containers, com cobrança baseada no tempo de execução e nos recursos consumidos.
+
+## EKS
+- Amazon EKS (Elastic Kubernetes Service) é um serviço gerenciado de orquestração de containers oferecido pela AWS, baseado no Kubernetes. O EKS permite que você execute, gerencie e escale aplicações em containers usando o Kubernetes sem a necessidade de instalar e operar sua própria infraestrutura de Kubernetes.
+- O EKS usa o IAM (Identity and Access Management) da AWS para autenticar e autorizar os usuários do Kubernetes. Além disso, a comunicação entre os nós do Kubernetes e o plano de controle é criptografada
+- O EKS facilita a implementação de pipelines de integração contínua e entrega contínua (CI/CD) para automatizar o ciclo de vida das aplicações, além de ser compatível com várias ferramentas de CI/CD, como Jenkins, GitLab, e CodePipeline.
 
 ## :books: Referências
  - *https://docs.aws.amazon.com/ecs/*
@@ -2247,6 +2240,10 @@ Pensa nele como um porteiro digital: ele recebe as requisições dos usuários, 
 - Quando um cliente faz uma requisição para a API, o API Gateway pode ser configurado para enviar essa requisição diretamente para uma função Lambda. A função Lambda processa a requisição, executa a lógica desejada (por exemplo, buscar dados em um banco de dados, realizar cálculos, etc.) e retorna uma resposta ao API Gateway, que por sua vez retorna a resposta para o cliente.
 - O API Gateway precisa de permissões para invocar a função Lambda. Para isso, você deve criar uma role IAM que permite ao API Gateway invocar a função Lambda e associá-la ao API Gateway. Isso é feito automaticamente se você usar o console do API Gateway para configurar a integração.
 - Depois de configurar, você pode testar a API diretamente no console do API Gateway. Ele enviará a requisição para a função Lambda e mostrará a resposta.
+
+## Cache
+- O cache armazena os resultados das respostas em memória, e se uma solicitação subsequente para o mesmo recurso for feita, o API Gateway pode retornar a resposta diretamente do cache em vez de executar novamente toda a lógica da API, como chamadas a bancos de dados ou outros serviços.
+- Você pode configurar a duração do cache (TTL - Time to Live) para controlar quanto tempo os dados devem ser armazenados antes de expirar e fazer uma nova solicitação ao backend.
 
 ## :books: Referências
  - *https://docs.aws.amazon.com/apigateway/*
