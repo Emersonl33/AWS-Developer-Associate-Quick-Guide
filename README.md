@@ -33,69 +33,69 @@ Nessa secão vou organizar o conteúdo do exame de acordo com o tipo do serviço
   
 ### 🔑 ****Security, Identity, and Compliance****
 - [**IAM**](./md%20Files/IAM.md) 💳  
-- [**Secrets Manager**](Secrets-Manager.md) 🔐  
-- [**ACM**](ACM.md) 📜 
-- [**Cognito**](Cognito.md) 👥  
-- [**KMS**](KMS.md) 🔒  
-- [**WAF**](WAF.md) 🔥
+- [**Secrets Manager**](./md%20Files/Secrets-Manager.md) 🔐  
+- [**ACM**](./md%20Files/ACM.md) 📜 
+- [**Cognito**](./md%20Files/Cognito.md) 👥  
+- [**KMS**](./md%20Files/KMS.md) 🔒  
+- [**WAF**](./md%20Files/WAF.md) 🔥
 
 ### 💾 ****Storage****
-- [**EBS**](EBS.md) 🧱
-- [**EFS**](EFS.md) 📂
-- [**S3**](S3.md) 🪣
+- [**EBS**](./md%20Files/EBS.md) 🧱
+- [**EFS**](./md%20Files/EFS.md) 📂
+- [**S3**](./md%20Files/S3.md) 🪣
 
 ### 🖥️ ****Compute****
-- [**EC2**](EC2.md) 🖥️
-- [ECS](ECS.md) 🐋
-- [Lambda](Lambda.md) λ
-- [SAM (Serverless Application Model)](SAM.md) 🐿️
-- [Elastic Beanstalk](Elastic-Beanstalk.md) 🌱
+- [**EC2**](./md%20Files/EC2.md) 🖥️
+- [ECS](./md%20Files/ECS.md) 🐋
+- [Lambda](./md%20Files/Lambda.md) λ
+- [SAM (Serverless Application Model)](./md%20Files/SAM.md) 🐿️
+- [Elastic Beanstalk](./md%20Files/Elastic-Beanstalk.md) 🌱
 
 ### 🎲 ****Banco de Dados****
-- [DynamoDB](DynamoDB.md) 📊
-- [RDS](RDS.md) 🗄️
-- [Aurora](Aurora.md) 🌌
-- [**ElastiCache**](ElastiCache.md) 🌀
-- [**MemoryDB**](MemoryDB.md) 🧠
+- [DynamoDB](./md%20Files/DynamoDB.md) 📊
+- [RDS](./md%20Files/RDS.md) 🗄️
+- [Aurora](./md%20Files/Aurora.md) 🌌
+- [**ElastiCache**](./md%20Files/ElastiCache.md) 🌀
+- [**MemoryDB**](./md%20Files/MemoryDB.md) 🧠
 
 ### 🚀 **Developer Tools**
-- [**Amplify**](Amplify.md) 📡  
-- [**CloudShell**](CloudShell.md) ☁️
-- [CodeArtifact](CodeArtifact.md) 📦
-- [CodeBuild](CodeBuild.md) ⚙️
-- [CodeDeploy](CodeDeploy.md) 🚀
-- [CodeCommit](CodeCommit.md) 💼
-- [CodePipeline](CodePipeline.md) 🔄
-- [X-Ray](X-Ray.md) 🔍
-- [**CLI**](CLI.md) ⌨️
-- [SDK (Software Development Kit)](SDK.md) 🛠️
-- [CDK (Cloud Development Kit)](CDK.md) 🏗️
+- [**Amplify**](./md%20Files/Amplify.md) 📡  
+- [**CloudShell**](./md%20Files/CloudShell.md) ☁️
+- [CodeArtifact](./md%20Files/CodeArtifact.md) 📦
+- [CodeBuild](./md%20Files/CodeBuild.md) ⚙️
+- [CodeDeploy](./md%20Files/CodeDeploy.md) 🚀
+- [CodeCommit](./md%20Files/CodeCommit.md) 💼
+- [CodePipeline](./md%20Files/CodePipeline.md) 🔄
+- [X-Ray](./md%20Files/X-Ray.md) 🔍
+- [**CLI**](./md%20Files/CLI.md) ⌨️
+- [SDK (Software Development Kit)](./md%20Files/SDK.md) 🛠️
+- [CDK (Cloud Development Kit)](./md%20Files/CDK.md) 🏗️
 
 ### 💼 **Gerenciamento e Governança** 📜
-- [**Systems Manager**](Systems-Manager.md) 🗂️  
-- [**AppConfig**](AppConfig.md) 🧩  
-- [**CloudFormation**](CloudFormation.md) 🏗️
-- [CloudWatch](CloudWatch.md) ⏰
-- [CloudTrail](CloudTrail.md) 📑
+- [**Systems Manager**](./md%20Files/Systems-Manager.md) 🗂️  
+- [**AppConfig**](./md%20Files/AppConfig.md) 🧩  
+- [**CloudFormation**](./md%20Files/CloudFormation.md) 🏗️
+- [CloudWatch](./md%20Files/CloudWatch.md) ⏰
+- [CloudTrail](./md%20Files/CloudTrail.md) 📑
 
 ### 🔍 **Analytics**  
-- [**Athena**](Athena.md) 🏛️  
-- [**OpenSearch**](OpenSearch.md) 🔍  
-- [Kinesis](Kinesis.md) 🔄
+- [**Athena**](./md%20Files/Athena.md) 🏛️  
+- [**OpenSearch**](./md%20Files/OpenSearch.md) 🔍  
+- [Kinesis](./md%20Files/Kinesis.md) 🔄
 
 ### 📲 **App Integration** 🌐
-- [SQS](SQS.md) 📦
-- [SNS](SNS.md) 📢
-- [EventBridge](EventBridge.md) 🚨
-- [**Step Functions**](StepFunctions.md) 🧭  
-- [**AppSync**](AppSync.md) 🔗
+- [SQS](./md%20Files/SQS.md) 📦
+- [SNS](./md%20Files/SNS.md) 📢
+- [EventBridge](./md%20Files/EventBridge.md) 🚨
+- [**Step Functions**](./md%20Files/StepFunctions.md) 🧭  
+- [**AppSync**](./md%20Files/AppSync.md) 🔗
   
 ### ☁️ **Networking and Content Delivery** 📦
-- [API Gateway](API-Gateway.md) 🌐
-- [CloudFront](CloudFront.md) ⚡
-- [Elastic Load Balancer (ELB)](ELB.md) ⚖️
-- [Route 53](Route53.md) 🌍
-- [VPC](VPC.md) 🖧
+- [API Gateway](./md%20Files/API-Gateway.md) 🌐
+- [CloudFront](./md%20Files/CloudFront.md) ⚡
+- [Elastic Load Balancer (ELB)](./md%20Files/ELB.md) ⚖️
+- [Route 53](./md%20Files/Route53.md) 🌍
+- [VPC](./md%20Files/VPC.md) 🖧
 
 <h1 align= "center"> 
 🔒Security, Identity, and Compliance👤
