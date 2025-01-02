@@ -32,7 +32,7 @@ Nessa secão vou organizar o conteúdo do exame de acordo com o tipo do serviço
 **O repositório está organizado por tópicos e serviços relevantes para a certificação, todo conteúdo está contido nesse README e também pode ser acessado por serviço específico pelos arquivos .md** <br>
   
 ### 🔑 ****Security, Identity, and Compliance****
-- [**IAM**](IAM.md) 💳  
+- [**IAM**](./md%20Files/IAM.md) 💳  
 - [**Secrets Manager**](Secrets-Manager.md) 🔐  
 - [**ACM**](ACM.md) 📜 
 - [**Cognito**](Cognito.md) 👥  
